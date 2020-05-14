@@ -1,0 +1,32 @@
+.card__image {
+    background-size: cover;
+    max-height: 272px;
+    border-radius: 5% 5% 0 0;
+
+}
+
+@media screen and (max-width: 1120px) {
+    .card__image {
+        max-height: 220px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card__image {
+        max-height: 150px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .card__image {
+        max-width: 368px;
+        max-height: 286px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card__image {
+        max-height: 196px;
+        max-width: 288px;
+    }
+}

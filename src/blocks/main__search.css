@@ -1,0 +1,29 @@
+.main__search {
+    background: #FFFFFF;
+    border: 1px solid #D1D2D6;
+    box-sizing: border-box;
+    backdrop-filter: blur(8px);
+    border-radius: 100px;
+    width: 608px;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+    .main__search {
+        width: 448px;
+        height: 56px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main__search {
+        display: flex;
+        flex-direction: column;
+        width: 288px;
+        background: transparent;
+        border: none;
+        height: auto;
+    }
+}

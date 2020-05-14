@@ -1,0 +1,6 @@
+.search-resault__fail {
+    height: 374px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+};

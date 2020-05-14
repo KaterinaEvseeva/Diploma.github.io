@@ -1,0 +1,8 @@
+.border {
+    margin: auto;
+    background-color: rgba(196, 196, 196);
+    border: 0;
+    height: 1px;
+    padding: 0;
+    /* width: 117%; */
+}

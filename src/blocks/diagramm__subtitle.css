@@ -1,0 +1,10 @@
+.diagramm__subtitle {
+    display: flex;
+    padding-top: 48px;
+}
+
+@media screen and (max-width: 320px) {
+    .diagramm__subtitle {
+        padding-top: 16px;
+    }
+}

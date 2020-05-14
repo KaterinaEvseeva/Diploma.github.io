@@ -1,0 +1,50 @@
+@import '../blocks/header__links__customer.css';
+@import '../blocks/header__logo_black.css';
+@import '../blocks/analytics__subtitle.css';
+@import '../blocks/analytics__title.css';
+@import '../blocks/span.css';
+@import '../blocks/analytics__news.css';
+@import '../blocks/analytics__num.css';
+@import '../blocks/diagramm__header.css';
+@import '../blocks/diagramm.css';
+@import '../blocks/diagramm__subtitle.css';
+@import '../blocks/diagramm__subtitle_data.css';
+@import '../blocks/diagramm__subtitle_percent.css';
+@import '../blocks/diagramm__subtitle_data-month.css';
+@import '../blocks/diagramm__subtitle_data-num.css';
+@import '../blocks/diagramm__scala_num.css';
+@import '../blocks/diagramm__scala.css';
+@import '../blocks/diagramm__week_day.css';
+@import '../blocks/digaramm__week.css';
+
+
+.analytics {
+    background: #E5E5E5;
+    padding-left: 104px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+@media screen and (max-width: 900px) {
+    .analytics {
+        padding-top: 32px;
+        padding-left: 70px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .analytics {
+        padding-left: 40px;
+        padding-bottom: 40px;
+
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .analytics {
+        padding-left: 16px;
+        padding-bottom: 24px;
+        padding-top: 16px;
+
+    }
+}

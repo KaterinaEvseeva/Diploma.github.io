@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>About</title>
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="32x32" href="./images/Favicon.png">
+    <!-- <link rel="icon" href="./images/favicon.ico" type="image/ico"> -->
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analytics.css %>">
+</head>
+
+<body class="body">
+    <div class="body__container container">
+        <header class="body__header header">
+            <h5 class="header__logo_black">NewsAnalyzer</h5>
+            <div class="header__links__customer">
+                <a href="./index.html"  class="header__links__customer header__link_main">Главная</a>
+                <a href="./about.html"  class="header__links__customer header__link_about">О проекте</a>
+            </div>
+        </header>
+        <section class="body__analytics analytics">
+            <h4 class="analytics__subtitle">Главная / Аналитика</h4>
+            <h2 class="analytics__title">Вы спросили: «Путешествия»</h2>
+            <p class="analytics__news">Новостей за неделю: <span class="analytics__num">34 324</span></p>
+            <p class="analytics__news">Упоминаний в загаловках: <span class="analytics__num">235</span></p>
+        </section>
+        <section class="body__diagramm diagramm">
+            <h3 class="diagramm__header">Аналитика по дням</h3>
+            <div class="diagramm__subtitle">
+                <div class="diagramm__subtitle_data">
+                    <h5 class="diagramm__subtitle_data-month">Дата</h5>
+                    <h5 class="diagramm__subtitle_data-num">(Август)</h5>
+                </div>
+                <h5 class="diagramm__subtitle_percent">КОЛ-ВО УПОМИНАНИЙ</h5>
+            </div>
+            <hr>
+            <div class="diagramm__scala">
+                <div class="diagramm__scala_num">0</div>
+                <div class="diagramm__scala_num">25</div>
+                <div class="diagramm__scala_num">50</div>
+                <div class="diagramm__scala_num">75</div>
+                <div class="diagramm__scala_num">100</div>
+            </div>
+            <div class="digaramm__week">
+                <div class="diagramm__week_day">19, пн</div>
+                <div class="diagramm__week_day">20, вт</div>
+                <div class="diagramm__week_day">21, ср</div>
+                <div class="diagramm__week_day">22, чт</div>
+                <div class="diagramm__week_day">23, пт</div>
+                <div class="diagramm__week_day">24, сб</div>
+                <div class="diagramm__week_day">25, вс</div>
+
+            </div>
+        </section>
+
+        <footer class="body__footer footer">
+            <span class="footer__copyright">©2019 Supercite</span>
+            <div class="footer__links">
+                <a class="footer__link" href="./index.html">Главная</a>
+                <a class="footer__link" href="./about.html">О проекте</a>
+                <a class="footer__link" href="#">Яндекс.Практикум</a>
+            </div>
+            <div class="footer__social">
+                <a class="footer__social_git" target="_blank" href="https://github.com/KaterinaEvseeva/Diploma.github.io">
+                    <img class="footer__social_git-icon" src="<%=require('../images/GH.png')%>" alt="Github-icon"></a>
+                <a class="footer__social_FB" target="_blank" href="https://www.facebook.com/profile.php?id=1841680444">
+                    <img class="footer__social_FB-icon" src="<%=require('../images/FB.png')%>" alt="FB-icon"></a>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
+</body>
+
+</html>

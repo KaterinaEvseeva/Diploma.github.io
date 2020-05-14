@@ -1,0 +1,33 @@
+.git__card {
+    height: 288px;
+    width: 400px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+@media screen and (max-width: 850px) {
+    .git__card {
+        height: 242px;
+        width: 336px;
+        text-overflow: ellipsis;
+        display: -moz-box;
+        -moz-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        line-clamp: 4;
+        box-orient: vertical; 
+
+        }
+}
+
+@media screen and (max-width: 320px) {
+    .git__card {
+        height: 264px;
+        width: 288px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

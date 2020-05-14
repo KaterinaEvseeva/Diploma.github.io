@@ -1,0 +1,10 @@
+@media screen and (max-width: 320px) {
+    .analytics_githab-span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .analytics_githab-span {
+padding-left: 10px;    }
+}

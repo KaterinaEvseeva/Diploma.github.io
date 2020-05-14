@@ -1,0 +1,39 @@
+.card__header {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    color: #1A1B22;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+@media screen and (max-width: 1300px) {
+    .card__header {
+        font-size: 22px;
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card__header {
+        font-size: 22px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .card__header {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card__header {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}

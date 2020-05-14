@@ -1,0 +1,11 @@
+.git__subtitle_button {
+    display: flex;
+}
+
+@media screen and (max-width: 320px) {
+    .git__subtitle_button {
+        border: 1px solid black;
+        width: 288px;
+        height: 56px;
+    }
+}

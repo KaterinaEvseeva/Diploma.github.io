@@ -1,0 +1,27 @@
+.main {
+    width: 545px;
+    margin: auto;
+    padding-bottom: 80px;
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        max-width: 385px;
+        padding-bottom: 48px;
+        min-width: 320px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .main {
+        max-width: 320px;
+        padding-bottom: 48px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .main {
+        max-width: 285px;
+        padding-bottom: 32px;
+    }
+}

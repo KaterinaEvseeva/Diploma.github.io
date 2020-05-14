@@ -1,0 +1,21 @@
+.header__links {
+    font-family: Roboto, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #B6BCBF;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header__links:hover {
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 320px) {
+    .header__links {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}

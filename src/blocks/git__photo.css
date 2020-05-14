@@ -1,0 +1,11 @@
+.git__photo {
+    height: 64px;
+    width: 64px;
+}
+
+@media screen and (max-width: 768px) {
+    .git__photo {
+        height: 48px;
+        width: 48px;
+    }
+}

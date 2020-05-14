@@ -1,0 +1,18 @@
+.customers__container {
+    display: flex;
+    height: 458px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+    .customers__container {
+        height: 510px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .customers__container {
+        height: auto;
+    }
+}

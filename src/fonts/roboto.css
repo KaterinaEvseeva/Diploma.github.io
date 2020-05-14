@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url("./roboto-medium.woff") format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("./roboto-regular.woff") format('truetype');
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url("./robotoslab-regular.woff") format('truetype');
+}
+@font-face {
+    font-family: 'Sourcesanspro';
+    src: url("./sourcesanspro-regular.woff") format('truetype');
+}

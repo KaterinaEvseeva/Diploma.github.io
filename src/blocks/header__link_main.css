@@ -1,0 +1,15 @@
+.header__link_main {
+    padding-right: 34px;
+}
+
+@media screen and (max-width: 500px) {
+    .header__link_main {
+        padding-right: 18px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header__link_main {
+        padding-right: 11px;
+    }
+}
