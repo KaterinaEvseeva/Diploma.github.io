@@ -1,4 +1,4 @@
-.diagramm__scala_num {
+.diagramm__scala.diagramm__scala_num {
     font-family: Roboto, Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -7,4 +7,5 @@
     letter-spacing: 0.4px;
     text-transform: uppercase;
     color: #B6BCBF;
+    padding-left: 0;
 }

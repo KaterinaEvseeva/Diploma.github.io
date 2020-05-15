@@ -87,10 +87,10 @@ module.exports = {
     }),
     new WebpackMd5Hash(),
     // new Swiper({
-    //   speed: 400,
-    //   spaceBetween: 100,
-    //   direction: 'horizontal',
-    //   loop: true,
+    //   // speed: 400,
+    //   // spaceBetween: 100,
+    //   // direction: 'horizontal',
+    //   // loop: true,
     // }),
     new webpack.SourceMapDevToolPlugin({}),
     new webpack.DefinePlugin({

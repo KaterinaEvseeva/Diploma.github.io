@@ -7,6 +7,7 @@
     color: #1A1B22;
     padding-top: 80px;
     margin: 0;
+    padding-bottom: 48px;
 }
 
 @media screen and (max-width: 768px) {
@@ -17,8 +18,9 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 320px) {
     .diagramm__header {
         padding-top: 24px;
+        padding-bottom: 16px;
     }
 }

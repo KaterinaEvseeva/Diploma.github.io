@@ -9,4 +9,6 @@
     margin: 0;
     padding-right: 60px;
     text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
 }

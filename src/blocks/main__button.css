@@ -17,6 +17,10 @@
 background: #2A65CC;
 border: 2F71E5;
 }
+
+.main__button:hover {
+    background: #347EFF;
+}
 @media screen and (max-width: 768px) {
     .main__button {
         width: 160px;

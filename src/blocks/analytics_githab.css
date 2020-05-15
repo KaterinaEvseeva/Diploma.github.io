@@ -9,5 +9,6 @@
     .search-resault_analytics.analytics_githab {
         justify-content: center;
         margin-top: 15px;
+        background: transparent;
     }
 }
