@@ -9,7 +9,7 @@
     <title>Diploma Yandex</title>
     <link data-react-helmet="true" rel="icon" type="image/png" sizes="32x32" href="./images/Favicon.png">
     <!-- <link rel="icon" href="./images/favicon.ico" type="image/ico"> -->
-    <link rel="stylesheet" href="main.2c396561bd9ad8f385e2.css">
+    <link rel="stylesheet" href="main.3d0c94319a5fcaf7d67d.css">
 </head>
 
 <body class="body">
@@ -27,10 +27,10 @@
                 <h1 class="main__title">Что в мире творится?</h1>
                 <p class="main__instruction">Введите в поиске любую тему и узнайте, насколько популярной она была в
                     новостях за прошедшую неделю.</p>
-                <div class="main__search">
-                    <input type="text" class="main__input main__input_button" placeholder="Введите тему новости">
+                <form class="main__search">
+                    <input type="text" class="main__input main__input_button" minlength="2" required placeholder="Введите тему новости">
                     <button type="button" class="main__button">Искать</button>
-                </div>
+                </form>
             </main>
         </div>
         <section class="body__search-resault search-resault">
@@ -45,12 +45,12 @@
             </div> -->
             <div class="search-resault__desc">
                 <div class="search-resault__header">
-                    <h2 class="search-resault_resault">Результаты поиска</h2>
-                    <a class="search-resault_analytics"  href="./analytics.html">Посмотреть аналитику ></a>
+                    <h2 class="search-resault search-resault_resault">Результаты поиска</h2>
+                    <a class="search-resault search-resault_analytics"  href="./analytics.html">Посмотреть аналитику ></a>
                 </div>
                 <div class="search-resault__container">
                 <div class="search-resault__grid">
-                    <div class="search-resault__grid_card">
+                    <div class="search-resault__grid search-resault__grid_card card">
                         <img class="card__image" src="./images/image_08.png" alt="Parks">
                         <div class="card__data">
                             <h5 class="card__today">2 августа, 2019</h5>
@@ -62,7 +62,7 @@
                             <a class="card__resource" href="#">Лента.ру</a>
                         </div>
                     </div>
-                    <div class="search-resault__grid_card">
+                    <div class="search-resault__grid search-resault__grid_card card">
                         <img class="card__image" src="./images/image_04.png" alt="Lesniye_ogonki">
                         <div class="card__data">
                             <h5 class="card__today">2 августа, 2019</h5>
@@ -72,7 +72,7 @@
                             <a class="card__resource" href="#">Медуза</a>
                         </div>
                     </div>
-                    <div class="search-resault__grid_card">
+                    <div class="search-resault__grid search-resault__grid_card card">
                         <img class="card__image" src="./images/image_07.png" alt="Taiga">
                         <div class="card__data">
                             <h5 class="card__today">2 августа, 2019</h5>
@@ -82,7 +82,7 @@
                             <a class="card__resource" href="#">Риа</a>
                         </div>
                     </div>
-                        <div class="search-resault__grid_card">
+                        <div class="search-resault__grid search-resault__grid_card card">
                             <img class="card__image" src="./images/image_06.png" alt="Parks2">
                             <div class="card__data">
                                 <h5 class="card__today">2 августа, 2019</h5>
@@ -94,7 +94,7 @@
                                 <a class="card__resource" href="#">Лента.ру</a>
                             </div>
                         </div>
-                        <div class="search-resault__grid_card">
+                        <div class="search-resault__grid search-resault__grid_card card">
                             <img class="card__image" src="./images/image_01.png" alt="Lesniye_ogonki-2">
                             <div class="card__data">
                                 <h5 class="card__today">2 августа, 2019</h5>
@@ -104,7 +104,7 @@
                                 <a class="card__resource" href="#">Медуза</a>
                             </div>
                         </div>
-                        <div class="search-resault__grid_card">
+                        <div class="search-resault__grid search-resault__grid_card card">
                             <img class="card__image" src="./images/image_05.png" alt="Taiga2">
                             <div class="card__data">
                                 <h5 class="card__today">2 августа, 2019</h5>
@@ -124,26 +124,26 @@
         <section class="body__author main__author">
             <img class="author__photo" src="./images/image-03.jpg" alt="Author_Portrait">
             <div class="author__about">
-                <h2 class="author__about_title">Об авторе</h2>
-                <p class="author__about_detail">Это блок с описанием автора проекта. Здесь следует указать,
+                <h2 class="author__about author__about_title">Об авторе</h2>
+                <p class="author__about author__about_detail">Это блок с описанием автора проекта. Здесь следует указать,
                     как вас зовут, чем вы занимаетесь,
                     какими технологиями разработки владеете.</p>
-                <p class="author__about_detail">Также можно рассказать о процессе обучения в Практикуме,
+                <p class="author__about author__about_detail">Также можно рассказать о процессе обучения в Практикуме,
                     чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
             </div>
         </section>
         <footer class="body__footer footer">
             <span class="footer__copyright">©2019 Supercite</span>
-            <div class="footer__links">
-                <a class="footer__link" href="#">Главная</a>
-                <a class="footer__link" href="./about.html">О проекте</a>
-                <a class="footer__link" href="#">Яндекс.Практикум</a>
-            </div>
+            <ul class="footer__links">
+                <li class="footer__link"><a class="footer__link footer__link_link"  href="./index.html">Главная</a></li>
+                <li class="footer__link"><a class="footer__link footer__link_link" href="./about.html">О проекте</a></li>
+                <li class="footer__link"><a class="footer__link footer__link_link" href="#">Яндекс.Практикум</a></li>
+            </ul>
             <div class="footer__social">
-                <a class="footer__social_git" target="_blank" href="https://github.com/KaterinaEvseeva/Diploma.github.io">
-                    <img class="footer__social_git-icon" src="./images/GH.png" alt="Github-icon"></a>
-                <a class="footer__social_FB" target="_blank" href="https://www.facebook.com/profile.php?id=1841680444">
-                    <img class="footer__social_FB-icon" src="./images/FB.png" alt="FB-icon"></a>
+                <a class="footer__social footer__social_git" target="_blank" href="https://github.com/KaterinaEvseeva/Diploma.github.io">
+                    <img class="footer__social footer__social_git-icon" src="./images/GH.png" alt="Github-icon"></a>
+                <a class="footer__social footer__social_FB" target="_blank" href="https://www.facebook.com/profile.php?id=1841680444">
+                    <img class="footer__social footer__social_FB-icon" src="./images/FB.png" alt="FB-icon"></a>
             </div>
         </footer>
     </div>
