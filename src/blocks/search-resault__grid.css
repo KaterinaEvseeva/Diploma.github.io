@@ -36,3 +36,6 @@
     }
 
 }
+.search-resault__grid_hidden {
+    display: none;
+}

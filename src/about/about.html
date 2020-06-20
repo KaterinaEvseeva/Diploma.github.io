@@ -10,6 +10,8 @@
     <link data-react-helmet="true" rel="icon" type="image/png" sizes="32x32" href="./images/Favicon.png">
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css %>">
     <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <!-- <link rel="stlesheet" href="../../node_modules/swiper/css/swiper.min.css"> -->
 </head>
 
 <body class="body">
@@ -17,7 +19,7 @@
         <header class="body__header header header_white">
             <h5 class="header__logo_black">NewsAnalyzer</h5>
             <div class="header__links__customer">
-                <a href="./index.html"  class="header__links__customer header__link_main">Главная</a>
+                <a href="./index.html" class="header__links__customer header__link_main">Главная</a>
                 <a href="#" class="header__links__customer header__link_about">О проекте</a>
             </div>
         </header>
@@ -58,12 +60,13 @@
                     </div>
                     <div class="technologies__card">
                         <h3 class="technologies__name">Java Script</h3>
-                        <img class="technologies__card technologies__picture_js" src="<%=require('../images/js.png')%>" alt="JS">
+                        <img class="technologies__card technologies__picture_js" src="<%=require('../images/js.png')%>"
+                            alt="JS">
                     </div>
                     <div class="technologies__card">
                         <h3 class="technologies__name">Webpack</h3>
-                        <img class="technologies__card technologies__picture_webpack" src="<%=require('../images/Webpack.png')%>"
-                            alt="Webpack">
+                        <img class="technologies__card technologies__picture_webpack"
+                            src="<%=require('../images/Webpack.png')%>" alt="Webpack">
                     </div>
                 </div>
             </div>
@@ -73,7 +76,8 @@
             <img class="author__photo" src="<%=require('../images/image-03.jpg')%>" alt="Author_Portrait">
             <div class="author__about">
                 <h2 class="author__about author__about_title">Об авторе</h2>
-                <p class="author__about author__about_detail">Это блок с описанием автора проекта. Здесь следует указать,
+                <p class="author__about author__about_detail">Это блок с описанием автора проекта. Здесь следует
+                    указать,
                     как вас зовут, чем вы занимаетесь,
                     какими технологиями разработки владеете.</p>
                 <p class="author__about author__about_detail">Также можно рассказать о процессе обучения в Практикуме,
@@ -81,109 +85,212 @@
             </div>
         </section>
         <section class="body__git git">
-            <div class="search-resault__desc">
+            <div class="search-resault__description">
                 <div class="search-resault search-resault__header_git">
-                    <h2 class="search-resault search-resault_resault resault_resault-git">История коммитов из GitHub</h2>
+                    <h2 class="search-resault search-resault_resault resault_resault-git">История коммитов из GitHub
+                    </h2>
                     <div class="git__subtitle">
-                    <a class="search-resault search-resault_analytics analytics_githab" target="_blank" href="https://github.com/KaterinaEvseeva/Diploma.github.io">Открыть в Github </a>
+                        <a class="search-resault search-resault_analytics analytics_githab" target="_blank"
+                            href="https://github.com/KaterinaEvseeva/Diploma.github.io">Открыть в Github </a>
                         <a class="analytics_githab-span"> ></a>
                     </div>
                 </div>
                 <div class="git__history swiper-container">
-                    <div class="git__card">
-                        <div class="git__card_container">
-                            <p class="git__day">14 августа, 2019</p>
-                            <div class="git__data">
-                                <img class="git__photo" src="<%=require('../images/Anton.png')%>" alt="Anton_Dolinin">
-                                <div class="git__contact">
-                                    <h4 class="git__author">Антон Долинин</h4>
-                                    <h5 class="git__email">anton@yandex.ru</h5>
+                    <div class="git swiper-wrapper">
+                        <div class="git__card swiper-slide">
+                            <div class="git__card_container">
+                                <p class="git__day">14 августа, 2019</p>
+                                <div class="git__data">
+                                    <img class="git__photo" src="<%=require('../images/Anton.png')%>"
+                                        alt="Anton_Dolinin">
+                                    <div class="git__contact">
+                                        <h4 class="git__author">Антон Долинин</h4>
+                                        <h5 class="git__email">anton@yandex.ru</h5>
+                                    </div>
                                 </div>
+                                <p class="git__text">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can
+                                    greatly improve your HTML & CSS workflow.</p>
                             </div>
-                            <p class="git__text">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can
-                                greatly improve your HTML & CSS workflow.</p>
+                        </div>
+                        <div class="git__card swiper-slide">
+                            <div class="git__card_container">
+                                <p class="git__day">14 августа, 2019</p>
+                                <div class="git__data">
+                                    <img class="git__photo" src="<%=require('../images/Maria.png')%>"
+                                        alt="Mariya_Fedorova">
+                                    <div class="git__contact">
+                                        <h4 class="git__author">Мария Фёдорова</h4>
+                                        <h5 class="git__email">mariiifed@yandex.ru</h5>
+                                    </div>
+                                </div>
+                                <p class="git__text">You can install this plugin directly from NetBeans Plugin Portal:
+                                    in NetBeans, open Tools > Plugins > Available plugins and find and install Emmet
+                                    plugin.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="git__card swiper-slide">
+                            <div class="git__card_container">
+                                <p class="git__day">14 августа, 2019</p>
+                                <div class="git__data">
+                                    <img class="git__photo" src="<%=require('../images/Inga.png')%>" alt="Inga_Ivanova">
+                                    <div class="git__contact">
+                                        <h4 class="git__author">Инга Иванова</h4>
+                                        <h5 class="git__email">ingaiva@yandex.ru</h5>
+                                    </div>
+                                </div>
+                                <p class="git__text">With Emmet, you can type CSS-like expressions that can be
+                                    dynamically
+                                    parsed, and produce output depending on what you type in the abb...</p>
+                            </div>
+                        </div>
+                        <div class="git__card swiper-slide">
+                            <div class="git__card_container">
+                                <p class="git__day">14 августа, 2019</p>
+                                <div class="git__data">
+                                    <img class="git__photo" src="<%=require('../images/Anton.png')%>"
+                                        alt="Anton_Dolinin">
+                                    <div class="git__contact">
+                                        <h4 class="git__author">Антон Долинин</h4>
+                                        <h5 class="git__email">anton@yandex.ru</h5>
+                                    </div>
+                                </div>
+                                <p class="git__text">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can
+                                    greatly improve your HTML & CSS workflow.</p>
+                            </div>
+                        </div>
+                        <div class="git__card swiper-slide">
+                            <div class="git__card_container">
+                                <p class="git__day">14 августа, 2019</p>
+                                <div class="git__data">
+                                    <img class="git__photo" src="<%=require('../images/Anton.png')%>"
+                                        alt="Anton_Dolinin">
+                                    <div class="git__contact">
+                                        <h4 class="git__author">Антон Долинин</h4>
+                                        <h5 class="git__email">anton@yandex.ru</h5>
+                                    </div>
+                                </div>
+                                <p class="git__text">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can
+                                    greatly improve your HTML & CSS workflow.</p>
+                            </div>
+                        </div>
+                        <div class="git__card swiper-slide">
+                            <div class="git__card_container">
+                                <p class="git__day">14 августа, 2019</p>
+                                <div class="git__data">
+                                    <img class="git__photo" src="<%=require('../images/Maria.png')%>"
+                                        alt="Mariya_Fedorova">
+                                    <div class="git__contact">
+                                        <h4 class="git__author">Мария Фёдорова</h4>
+                                        <h5 class="git__email">mariiifed@yandex.ru</h5>
+                                    </div>
+                                </div>
+                                <p class="git__text">You can install this plugin directly from NetBeans Plugin Portal:
+                                    in NetBeans, open Tools > Plugins > Available plugins and find and install Emmet
+                                    plugin.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="git__card swiper-slide">
+                            <div class="git__card_container">
+                                <p class="git__day">14 августа, 2019</p>
+                                <div class="git__data">
+                                    <img class="git__photo" src="<%=require('../images/Inga.png')%>" alt="Inga_Ivanova">
+                                    <div class="git__contact">
+                                        <h4 class="git__author">Инга Иванова</h4>
+                                        <h5 class="git__email">ingaiva@yandex.ru</h5>
+                                    </div>
+                                </div>
+                                <p class="git__text">With Emmet, you can type CSS-like expressions that can be
+                                    dynamically
+                                    parsed, and produce output depending on what you type in the abb...</p>
+                            </div>
+                        </div>
+                        <div class="git__card swiper-slide">
+                            <div class="git__card_container">
+                                <p class="git__day">14 августа, 2019</p>
+                                <div class="git__data">
+                                    <img class="git__photo" src="<%=require('../images/Anton.png')%>"
+                                        alt="Anton_Dolinin">
+                                    <div class="git__contact">
+                                        <h4 class="git__author">Антон Долинин</h4>
+                                        <h5 class="git__email">anton@yandex.ru</h5>
+                                    </div>
+                                </div>
+                                <p class="git__text">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can
+                                    greatly improve your HTML & CSS workflow.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="git__card">
-                        <div class="git__card_container">
-                            <p class="git__day">14 августа, 2019</p>
-                            <div class="git__data">
-                                <img class="git__photo" src="<%=require('../images/Maria.png')%>" alt="Mariya_Fedorova">
-                                <div class="git__contact">
-                                    <h4 class="git__author">Мария Фёдорова</h4>
-                                    <h5 class="git__email">mariiifed@yandex.ru</h5>
-                                </div>
-                            </div>
-                            <p class="git__text">You can install this plugin directly from NetBeans Plugin Portal:
-                                in NetBeans, open Tools > Plugins > Available plugins and find and install Emmet plugin.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="git__card">
-                        <div class="git__card_container">
-                            <p class="git__day">14 августа, 2019</p>
-                            <div class="git__data">
-                                <img class="git__photo" src="<%=require('../images/Inga.png')%>" alt="Inga_Ivanova">
-                                <div class="git__contact">
-                                    <h4 class="git__author">Инга Иванова</h4>
-                                    <h5 class="git__email">ingaiva@yandex.ru</h5>
-                                </div>
-                            </div>
-                            <p class="git__text">With Emmet, you can type CSS-like expressions that can be dynamically
-                                parsed, and produce output depending on what you type in the abb...</p>
-                        </div>
-                    </div>
-                    <!-- <div class="git__card">
-                        <div class="git__card_container">
-                            <p class="git__day">14 августа, 2019</p> -->
-                            <!-- <div class="git__data">
-                                <img class="git__photo" src="<%=require('../images/Anton.png')%>" alt="Anton_Dolinin">
-                                <div class="git__contact">
-                                    <h4 class="git__author">Антон Долинин</h4>
-                                    <h5 class="git__email">anton@yandex.ru</h5>
-                                </div>
-                            </div>
-                            <p class="git__text">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can
-                                greatly improve your HTML & CSS workflow.</p>
-                        </div>
-                    </div> -->
-
+                    <img class="swiper-button-prev" alt="Nav_button" src="<%=require('../images/slider-control.svg')%>">
+                    <img class="swiper-button-next" alt="Nav_button"
+                        src="<%=require('../images/slider-control-2.svg')%>">
                 </div>
-            </div
-            >
-        </section>
-        <footer class="body__footer footer">
-            <span class="footer__copyright">©2019 Supercite</span>
-            <ul class="footer__links">
-                <li class="footer__link"><a class="footer__link footer__link_link"  href="./index.html">Главная</a></li>
-                <li class="footer__link"><a class="footer__link footer__link_link" href="./about.html">О проекте</a></li>
-                <li class="footer__link" href="#">Яндекс.Практикум</li>
-            </ul>
-            <div class="footer__social">
-                <a class="footer__social footer__social_git" target="_blank" href="https://github.com/KaterinaEvseeva/Diploma.github.io">
-                    <img class="footer__social footer__social_git-icon" src="<%=require('../images/GH.png')%>" alt="Github-icon"></a>
-                <a class="footer__social footer__social_FB" target="_blank" href="https://www.facebook.com/profile.php?id=1841680444">
-                    <img class="footer__social footer__social_FB-icon" src="<%=require('../images/FB.png')%>" alt="FB-icon"></a>
+                <div class="swiper-pagination"></div>
+                <!-- <div class="swiper-scrollbar"></div> -->
             </div>
-        </footer>
+
     </div>
-    <!-- <script src="https://unpkg.com/swiper/js/swiper.min.js"></script> -->
-    <!-- <script>
-        var mySwiper = new Swiper ('.swiper-container', {
-            speed: 400,
-            spaceBetween: 100,
-            direction: 'horizontal',
-            loop: true,
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-          scrollbar: {
-            el: '.swiper-scrollbar',
-          },
-        })
+
+    </section>
+    <footer class="body__footer footer">
+        <span class="footer__copyright">©2019 Supercite</span>
+        <ul class="footer__links">
+            <li class="footer__link"><a class="footer__link footer__link_link" href="./index.html">Главная</a></li>
+            <li class="footer__link"><a class="footer__link footer__link_link" href="./about.html">О проекте</a></li>
+            <li class="footer__link" href="#">Яндекс.Практикум</li>
+        </ul>
+        <div class="footer__social">
+            <a class="footer__social footer__social_git" target="_blank"
+                href="https://github.com/KaterinaEvseeva/Diploma.github.io">
+                <img class="footer__social footer__social_git-icon" src="<%=require('../images/GH.png')%>"
+                    alt="Github-icon"></a>
+            <a class="footer__social footer__social_FB" target="_blank"
+                href="https://www.facebook.com/profile.php?id=1841680444">
+                <img class="footer__social footer__social_FB-icon" src="<%=require('../images/FB.png')%>"
+                    alt="FB-icon"></a>
+        </div>
+    </footer>
+    </div>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <!--
         // swipep-pagination-bullet-active {background-color: #000}
         </script> -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3,
+            spaceBetween: 16,
+            breakpoints: {
+                300: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                450: {
+                    slidesPerView: 2,
+                    spaceBetween: 8
+                },
+                850: {
+                    slidesPerView: 3,
+                    spaceBetween: 16
+                }
+            },
+
+            loop: true,
+            infinite: true,
+            grabCursor: true,
+            loopFillGroupWithBlank: true,
+            pagination: {
+                el: '.swiper-pagination',
+                // type: 'bullets',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+
+        });
+    </script>
 </body>
 <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
 </body>

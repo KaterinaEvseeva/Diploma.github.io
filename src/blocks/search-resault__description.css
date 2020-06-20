@@ -1,0 +1,11 @@
+.search-resault__description {
+    background: #F5F6F7;
+    height: 606px;
+}
+
+@media screen and (max-width: 320px) {
+    .search-resault__description {
+        background: #E5E5E5;
+        position: relative;
+    }
+}

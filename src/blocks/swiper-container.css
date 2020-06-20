@@ -1,19 +1,17 @@
-/* .git__history {
-    display: flex;
-    justify-content: space-around;
+.swiper-container {
     padding-bottom: 136px;
-    overflow: hidden;
+    width: 100%;
+    height: 288px;
 }
 
 @media screen and (max-width: 768px) {
-    .git__history {
+    .swiper-container {
         padding-bottom: 80px;
     }
 }
 
 @media screen and (max-width: 320px) {
-    .git__history {
-        flex-direction: column;
+    .swiper-container {
         padding-bottom: 136px;
     }
-} */
+}

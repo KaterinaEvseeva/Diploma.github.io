@@ -6,7 +6,6 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-// const Swiper = require('swiper');
 module.exports = {
   entry: {
     main: './src/index.js',
@@ -86,12 +85,6 @@ module.exports = {
       filename: 'analytics.html'
     }),
     new WebpackMd5Hash(),
-    // new Swiper({
-    //   // speed: 400,
-    //   // spaceBetween: 100,
-    //   // direction: 'horizontal',
-    //   // loop: true,
-    // }),
     new webpack.SourceMapDevToolPlugin({}),
     new webpack.DefinePlugin({
       NODE_ENV: JSON.stringify(process.env.NODE_ENV)

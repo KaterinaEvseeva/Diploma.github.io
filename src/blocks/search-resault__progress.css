@@ -6,3 +6,7 @@
     position: relative;
 
 }
+
+.search-resault__progress_hidden {
+    display: none;
+}

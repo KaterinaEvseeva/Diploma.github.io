@@ -31,3 +31,10 @@
 @import '../blocks/analytics_githab-span.css';
 @import '../blocks/git__subtitle_button.css';
 @import '../blocks/header_white.css';
+@import '../blocks/swiper-wrapper.css';
+@import '../blocks/swiper-slide.css';
+@import '../blocks/swiper-container.css';
+@import '../blocks/swiper-pagination.css';
+@import '../blocks/swiper-button-prev.css';
+@import '../blocks/swiper-button-next.css';
+@import '../blocks/search-resault__description.css';

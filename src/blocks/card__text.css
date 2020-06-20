@@ -6,6 +6,7 @@
     line-height: 22px;
     color: #1A1B22;
     margin-bottom: 18px;
+    word-wrap: break-word;
 }
 
 @media screen and (max-width: 1300px) {

@@ -4,3 +4,7 @@
     padding-top: 64px;
     padding-bottom: 80px;
 }
+
+.search-resault__show-more_hidden {
+    display: none;
+}
