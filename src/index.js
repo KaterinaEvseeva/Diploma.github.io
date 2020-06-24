@@ -1,7 +1,7 @@
 import './pages/style.css';
 // import NewsApi from './js/modules/NewsApi';
 // import './js/modules/DataStorage';
-// import NewsCard from './js/components/NewsCard';
+import NewsCard from './js/components/NewsCard';
 // import NewsCardList from './js/components/NewsCardList';
 // import { data } from 'autoprefixer';
 
@@ -9,7 +9,7 @@ import './pages/style.css';
 const input = document.querySelector('.main__input');
 const search = document.querySelector('.main__search');
 // const newsApi = new NewsApi;
-// const card = new NewsCard();
+const card = new NewsCard();
 // const newsCardList = new NewsCardList(newsContainer, card, form);
 // newsCardList.render();
 // const newsContainer = document.querySelector('.search-resault__container');
@@ -33,24 +33,25 @@ search.addEventListener('submit', getNews);
 
 
 
-function createCard(data) {
-    return ` <div class="search-resault__grid search-resault__grid_card card">
-        <img class="card__image" src="${data.urlToImage}" alt="${data.title}">
-        <div class="card__data">
-            <h5 class="card__today">${data.publishedAt}</h5>
-            <h2 class="card__header">${data.title}</h2>
-            <p class="card__text">${data.description}.</p>
-            <a class="card__resource" href="#">${data.source.name}</a>
-        </div>
-    </div>`;
-}
+// function createCard(data) {
+//     const template = ` <div class="search-resault__grid search-resault__grid_card card">
+//         <img class="card__image" src="${data.urlToImage}" alt="${data.title}">
+//         <div class="card__data">
+//             <h5 class="card__today">${data.publishedAt}</h5>
+//             <h2 class="card__header">${data.title}</h2>
+//             <p class="card__text">${data.description}.</p>
+//             <a class="card__resource" href="#">${data.source.name}</a>
+//         </div>
+//     </div>`;
+//     return template;
+// }
 
 function showCards() {
     const box = document.querySelector('.search-resault__grid');
 
     const articles = JSON.parse(localStorage.getItem('search-result'));
 
-    box.innerHTML += articles.slice(box.childElementCount, box.childElementCount + 3).map(createCard).join('');
+    box.innerHTML += articles.slice(box.childElementCount, box.childElementCount + 3).map(card.create).join('');
 
     if(box.childElementCount >= articles.length) {
         document.querySelector('.search-resault__show-more').classList.add('search-resault__show-more_hidden');
@@ -128,26 +129,3 @@ search.addEventListener('submit', getNews);
 
 document.querySelector('.search-resault__button').addEventListener('click', showCards);
 
-
-
-// const dataStorage = new DataStorage(arr);
-
-// window.addEventListener('storage', function(event) {
-//     console.log('change');
-// });
-
-// localStorage.setItem('data', 5);
-// console.log(localStorage.getItem('data'));
-
-
-// const arr = [1, 5, 8, 99];
-// localStorage.setItem('arr', JSON.stringify(arr));
-// let arrParsed = localStorage.getItem('arr');
-// arrParsed = JSON.parse(arrParsed);
-// console.log(arrParsed);
-// window.onload = function () {
-// if (localStorage.getItem('arr')!==null) {
-//     const options = localStorage.getItem('arr');
-//     getNews();
-// }
-// }
