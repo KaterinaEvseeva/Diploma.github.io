@@ -2,7 +2,7 @@
 // // getNews возвращает список новостей на основе запроса.
 
  export default class NewsApi {
-    constructor(url, apiKey, previousDate, currentDate, cardList, searchResaultFail, searchProgess ) {
+    constructor(url, apiKey, previousDate, currentDate, cardList, searchResaultFail, searchProgess, headers ) {
         this.url = url;
         this.apiKey = apiKey;
         this.previousDate = previousDate;
@@ -10,7 +10,7 @@
         this.cardList = cardList;
         this.searchResaultFail = searchResaultFail;
         this.searchProgess = searchProgess;
-        this.headers = this.headers;
+        this.headers = headers;
     }
     getNews(searchData) {
         return fetch(`${this.url}?q=${searchData}&apiKey=${this.apiKey}&pageSize=100`, {

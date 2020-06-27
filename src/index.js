@@ -10,9 +10,7 @@ const search = document.querySelector('.main__search');
 const container = document.querySelector('.search-resault__grid');
 const articles = JSON.parse(localStorage.getItem('search-result'));
 const NEWSAPI_KEY = '422aacd7b9af4b66bca82e0f23418cf8';
-
 const NEWSAPI_URL = 'https://newsapi.org/v2/everything';
-// const url = `https://cors-anywhere.herokuapp.com/` + `https://newsapi.org/v2/everything?q=${searchData}&apiKey=${apiKey}`;
 
 const card = new NewsCard();
 const cardList = new NewsCardList(container, card, articles);
@@ -24,18 +22,12 @@ const newsapi = new NewsApi({
     }
 });
 
-
 search.addEventListener('submit', () => {
     event.preventDefault();
     const searchData = input.value;
-    // const apiKey = '422aacd7b9af4b66bca82e0f23418cf8';
-
-    // const url = `https://newsapi.org/v2/everything?q=${searchData}&apiKey=${apiKey}`;
-
     if (!searchData) {
         return;
     }
-
     newsapi.getNews(searchData)
     .then(articles => {
         cardList.showCards(articles);
@@ -155,3 +147,5 @@ document.querySelector('.search-resault__button').addEventListener('click', () =
 // //   });
 
 // });
+
+// const url = `https://cors-anywhere.herokuapp.com/` + `https://newsapi.org/v2/everything?q=${searchData}&apiKey=${apiKey}`;
