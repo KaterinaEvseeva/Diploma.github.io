@@ -5,6 +5,7 @@ export default class NewsCard {
         this.sourceName = sourceName;
         this.description = description;
         this.urlToImage = urlToImage;
+        // this.convertDate();
     }
 
 
@@ -19,5 +20,27 @@ export default class NewsCard {
             </div>
         </div>`;
         return template;
+
     }
+
+    // convertDate(data) {
+    //     this.template.querySelector('.card__today').textContent = NewsCard._setFormattedDate(data.publishedAt);
+
+    // }
+    // static _setFormattedDate(dataDate) {
+    //     const formatter = new Intl.DateTimeFormat('ru-RU', {
+    //       day: 'numeric',
+    //       month: 'long',
+    //       year: 'numeric',
+    //     });
+    //     const [
+    //       { value: day },
+    //       ,
+    //       { value: month },
+    //       ,
+    //       { value: year },
+    //     ] = formatter.formatToParts(new PublishedAt(dataDate));
+    
+    //     return `${day} ${month}, ${year}`;
+    //   }
 }

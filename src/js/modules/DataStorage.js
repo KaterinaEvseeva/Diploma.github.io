@@ -1,3 +1,5 @@
+// Класс DataStorage предоставляет интерфейс для работы с локальным хранилищем браузера
+
 // export default class DataStorage {
 //     constructor(localStorage, arr, arrParsed) {
 //         this.localStorage = localStorage;

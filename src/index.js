@@ -3,24 +3,33 @@ import './pages/style.css';
 import NewsCard from './js/components/NewsCard';
 import NewsCardList from './js/components/NewsCardList';
 import NewsApi from './js/modules/NewsApi';
+import constants from './js/constants/Constants';
+import SearchInput from './js/components/SearchInput';
+
+const {
+    // LAST_DAY,
+    NEWSAPI_KEY,
+    NEWSAPI_URL,
+} = constants;
 
 const input = document.querySelector('.main__input');
 const search = document.querySelector('.main__search');
-
 const container = document.querySelector('.search-resault__grid');
 const articles = JSON.parse(localStorage.getItem('search-result'));
-const NEWSAPI_KEY = '422aacd7b9af4b66bca82e0f23418cf8';
-const NEWSAPI_URL = 'https://newsapi.org/v2/everything';
 
 const card = new NewsCard();
 const cardList = new NewsCardList(container, card, articles);
 const newsapi = new NewsApi({
     url: NEWSAPI_URL,
+    apiKey: NEWSAPI_KEY,
     headers: {
         authorization: NEWSAPI_KEY,
         'Content-Type': 'application/json',
-    }
+    },
+    // lastDay: LAST_DAY,
 });
+
+const searchInput = new SearchInput(document.querySelector('.search-resault'));
 
 search.addEventListener('submit', () => {
     event.preventDefault();
@@ -31,6 +40,7 @@ search.addEventListener('submit', () => {
     newsapi.getNews(searchData)
     .then(articles => {
         cardList.showCards(articles);
+        searchInput.showMoreResault(true);
       })
       .catch(err => {
         console.log(`Ошибка: ${err}`);

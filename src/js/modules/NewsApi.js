@@ -1,20 +1,31 @@
 // // NewsApi. Отвечает за взаимодействие с NewsAPI. У класса есть конструктор, принимающий опции и единственный обязательный метод getNews. 
 // // getNews возвращает список новостей на основе запроса.
 
+// import constants from '../constants/Constants';
+// const { ONE_DAY } = constants;
  export default class NewsApi {
-    constructor(url, apiKey, previousDate, currentDate, cardList, searchResaultFail, searchProgess, headers ) {
-        this.url = url;
-        this.apiKey = apiKey;
-        this.previousDate = previousDate;
-        this.currentDate = currentDate;
-        this.cardList = cardList;
-        this.searchResaultFail = searchResaultFail;
-        this.searchProgess = searchProgess;
-        this.headers = headers;
+    constructor(options) {
+        this.url = options.url;
+        this.apiKey = options.apiKey;
+        // this._lastDay = options.lastDay;
+        this.currentDate = options.currentDate;
+        this.searchResaultFail = options.searchResaultFail;
+        this.searchProgess = options.searchProgess;
+        this.headers = options.headers;
+        this.proxyUrl = 'https://cors-anywhere.herokuapp.com/';
     }
+
+    // _getDates() {
+    //     const today = new PublishedAt();
+    //     const lastDay = new PublishedAt(today.getTime() - this._lastDay * 86400000);
+    //     return `&from=${lastDay
+    //       .toISOString()
+    //       .slice(0, 10)}&to=${today.toISOString().slice(0, 10)}`;
+    //   }
     getNews(searchData) {
-        return fetch(`${this.url}?q=${searchData}&apiKey=${this.apiKey}&pageSize=100`, {
-            // method: 'GET',
+        // return fetch(`${this.proxyUrl}${this.url}?q=${searchData}${this._getDates()}&apiKey=${this.apiKey}&pageSize=100`, {
+    return fetch(`${this.proxyUrl}${this.url}?q=${searchData}&apiKey=${this.apiKey}&pageSize=100`, {
+
             headers: this.headers,
         })
         .then((res) => {
@@ -23,20 +34,15 @@
             }
             return Promise.reject(`Не удалось получить данные. Ошибка:${res.status}`);
         }).then((data) => {
-            if (data.articles.length == 0) {
-                this.searchResaultFail.querySelector('.search-resault__fail_txt').innerHTML = 'К сожалению по вашему запросу ничего не найдено.';
-                searchResaultFail.querySelector('.search-resault__fail_header').innerHTML = 'Ничего не найдено';
+            return data.articles;
+            // if (data.articles.length == 0) {
+            //     this.searchResaultFail.querySelector('.search-resault__fail_txt').innerHTML = 'К сожалению по вашему запросу ничего не найдено.';
+            //     searchResaultFail.querySelector('.search-resault__fail_header').innerHTML = 'Ничего не найдено';
 
-                searchResaultFail.classList.remove('search-resault__fail_hidden');
-            } else {
-                localStorage.setItem('search-resault', JSON.stringify(data.articles));
-
-                document.querySelector('.search-resault__grid').innerHTML = '';
-
-                this.cardList.showCards();
-
-                searchResaultGrid.classList.remove('search-resault__grid_hidden');
-            }
+            //     searchResaultFail.classList.remove('search-resault__fail_hidden');
+            // } else {
+            //     searchResaultGrid.classList.remove('search-resault__grid_hidden');
+            // }
 
         }).catch(err => {
             console.warn(err);
@@ -54,23 +60,5 @@
         });
     }
 
- }
 
-//    getNews(){
-//     return fetch(`https://cors-anywhere.herokuapp.com/` + 
-//     `https://praktikum.tk/news/v2/everything?q=${keyWord.value}&from=${previousDate}&to=${currentDate}&pageSize=${100}&apiKey=422aacd7b9af4b66bca82e0f23418cf8`, 
-//     {
-//         method: 'GET',
-//       })
-//         .then(res => {
-//           if (res.ok) {
-//             return res.json();
-//           }
-//           return Promise.reject(`Не удалось получить данные. Ошибка:${res.status}`);
-//         })
-//         .catch(err => {
-//           throw err;
-//         });
-//     }
-    
-// }
+ }
