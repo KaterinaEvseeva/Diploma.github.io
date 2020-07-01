@@ -3,7 +3,8 @@
 
 // import constants from '../constants/Constants';
 // const { ONE_DAY } = constants;
- export default class NewsApi {
+
+export default class NewsApi {
     constructor(options) {
         this.url = options.url;
         this.apiKey = options.apiKey;
@@ -24,41 +25,30 @@
     //   }
     getNews(searchData) {
         // return fetch(`${this.proxyUrl}${this.url}?q=${searchData}${this._getDates()}&apiKey=${this.apiKey}&pageSize=100`, {
-    return fetch(`${this.proxyUrl}${this.url}?q=${searchData}&apiKey=${this.apiKey}&pageSize=100`, {
+        return fetch(`${this.proxyUrl}${this.url}?q=${searchData}&apiKey=${this.apiKey}&pageSize=100`, {
 
-            headers: this.headers,
-        })
-        .then((res) => {
-            if (res.ok) {
-                return res.json();
-            }
-            return Promise.reject(`Не удалось получить данные. Ошибка:${res.status}`);
-        }).then((data) => {
-            return data.articles;
-            // if (data.articles.length == 0) {
-            //     this.searchResaultFail.querySelector('.search-resault__fail_txt').innerHTML = 'К сожалению по вашему запросу ничего не найдено.';
-            //     searchResaultFail.querySelector('.search-resault__fail_header').innerHTML = 'Ничего не найдено';
+                headers: this.headers,
+            })
+            .then((res) => {
+                if (res.ok) {
+                    return res.json();
+                }
+                return Promise.reject(`Не удалось получить данные. Ошибка:${res.status}`);
+            }).then((data) => {
+                // if (data.articles.length == 0) {
+                //     this.SearchInput.showFail();
+                    // this.removeShowCards();
+                    // this.searchResaultFail.querySelector('.search-resault__fail_txt').innerHTML = 'К сожалению по вашему запросу ничего не найдено.';
+                    // searchResaultFail.querySelector('.search-resault__fail_header').innerHTML = 'Ничего не найдено';
 
-            //     searchResaultFail.classList.remove('search-resault__fail_hidden');
-            // } else {
-            //     searchResaultGrid.classList.remove('search-resault__grid_hidden');
-            // }
+                    // searchResaultFail.classList.remove('search-resault__fail_hidden');
+                // }
+                return data.articles;
 
-        }).catch(err => {
-            console.warn(err);
-            const searchResaultFail = document.querySelector('.search-resault__fail');
-
-            searchResaultFail.querySelector('.search-resault__fail_txt').innerHTML = 'Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.';
-            searchResaultFail.querySelector('.search-resault__fail_header').innerHTML = 'Во время запроса произошла ошибка.';
-
-            searchResaultFail.classList.remove('search-resault__fail_hidden');
-
-        })
-        .finally(() => {
-            document.querySelector('.search-resault__progress').classList.add('search-resault__progress_hidden');
-
-        });
+            }).catch(err => {
+                console.warn(err);
+            })
     }
 
 
- }
+}

@@ -29,22 +29,35 @@ const newsapi = new NewsApi({
     // lastDay: LAST_DAY,
 });
 
-const searchInput = new SearchInput(document.querySelector('.search-resault'));
+const searchInput = new SearchInput(container, articles, document.querySelector('.search-resault__progress'), document.querySelector('.search-resault'), 
+document.querySelector('.search-resault__show-more'), document.querySelector('.search-resault__fail')
+);
 
 search.addEventListener('submit', () => {
     event.preventDefault();
+    searchInput.showPreloader();
     const searchData = input.value;
     if (!searchData) {
-        return;
+        searchInput.showFail();
     }
     newsapi.getNews(searchData)
     .then(articles => {
         cardList.showCards(articles);
-        searchInput.showMoreResault(true);
+        if (data.articles.length == 0) {
+            this.SearchInput.showFail();
+        }
       })
-      .catch(err => {
-        console.log(`Ошибка: ${err}`);
-      });
+      .then(articles => {
+        searchInput.showMoreResault(articles);
+      })
+      .catch(() => {
+        //   searchInput.showFail();
+          searchInput.showBadRequest();
+        //   searchInput.removeShowCards();
+      })
+      .finally(() => {
+        searchInput.removePreloader();
+    });
 });
 
 // function getNews(event) {
