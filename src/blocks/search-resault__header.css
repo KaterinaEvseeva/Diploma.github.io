@@ -31,3 +31,6 @@
         margin-bottom: 37px;
     }
 }
+.search-resault__header_hidden {
+    display: none;
+}

@@ -10,7 +10,7 @@
     <link data-react-helmet="true" rel="icon" type="image/png" sizes="32x32" href="./images/Favicon.png">
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css %>">
     <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css"> -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!-- <link rel="stlesheet" href="../../node_modules/swiper/css/swiper.min.css"> -->
 </head>
 
@@ -230,8 +230,6 @@
                 <!-- <div class="swiper-scrollbar"></div> -->
             </div>
 
-    </div>
-
     </section>
     <footer class="body__footer footer">
         <span class="footer__copyright">©2019 Supercite</span>
@@ -252,45 +250,10 @@
         </div>
     </footer>
     </div>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!--
         // swipep-pagination-bullet-active {background-color: #000}
         </script> -->
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 3,
-            spaceBetween: 16,
-            breakpoints: {
-                300: {
-                    slidesPerView: 1,
-                    spaceBetween: 20
-                },
-                450: {
-                    slidesPerView: 2,
-                    spaceBetween: 8
-                },
-                850: {
-                    slidesPerView: 3,
-                    spaceBetween: 16
-                }
-            },
-
-            loop: true,
-            infinite: true,
-            grabCursor: true,
-            loopFillGroupWithBlank: true,
-            pagination: {
-                el: '.swiper-pagination',
-                // type: 'bullets',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            }
-
-        });
-    </script>
 </body>
 <script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
 </body>

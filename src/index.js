@@ -7,7 +7,6 @@ import constants from './js/constants/Constants';
 import SearchInput from './js/components/SearchInput';
 
 const {
-    // LAST_DAY,
     NEWSAPI_KEY,
     NEWSAPI_URL,
 } = constants;
@@ -15,160 +14,52 @@ const {
 const input = document.querySelector('.main__input');
 const search = document.querySelector('.main__search');
 const container = document.querySelector('.search-resault__grid');
-const articles = JSON.parse(localStorage.getItem('search-result'));
 
 const card = new NewsCard();
-const cardList = new NewsCardList(container, card, articles);
+const cardList = new NewsCardList(container, card, []);
 const newsapi = new NewsApi({
     url: NEWSAPI_URL,
     apiKey: NEWSAPI_KEY,
     headers: {
         authorization: NEWSAPI_KEY,
         'Content-Type': 'application/json',
-    },
-    // lastDay: LAST_DAY,
+    }
 });
 
-const searchInput = new SearchInput(container, articles, document.querySelector('.search-resault__progress'), document.querySelector('.search-resault'), 
-document.querySelector('.search-resault__show-more'), document.querySelector('.search-resault__fail')
+const searchInput = new SearchInput(container, cardList, document.querySelector('.search-resault__progress'), document.querySelector('.search-resault'),
+    document.querySelector('.search-resault__show-more'), document.querySelector('.search-resault__fail')
 );
 
 search.addEventListener('submit', () => {
     event.preventDefault();
+    searchInput.removeAll();
     searchInput.showPreloader();
-    const searchData = input.value;
+
+     const searchData = input.value;
     if (!searchData) {
         searchInput.showFail();
-    }
+    } 
     newsapi.getNews(searchData)
-    .then(articles => {
-        cardList.showCards(articles);
-        if (data.articles.length == 0) {
-            this.SearchInput.showFail();
-        }
-      })
-      .then(articles => {
-        searchInput.showMoreResault(articles);
-      })
-      .catch(() => {
-        //   searchInput.showFail();
-          searchInput.showBadRequest();
-        //   searchInput.removeShowCards();
-      })
-      .finally(() => {
-        searchInput.removePreloader();
-    });
+        .then(articles => {
+            console.log(articles)
+            cardList.showCards(articles);
+            if(articles.length == 0) {
+                return searchInput.showFail();
+            }
+            searchInput.showMoreResault();
+        })
+        .catch(() => {
+            searchInput.showBadRequest();
+        })
+        .finally(() => {
+            searchInput.removePreloader();
+        });
 });
-
-// function getNews(event) {
-//     event.preventDefault();
-
-//     const searchData = input.value;
-
-//     if (!searchData) {
-//         return;
-//     }
-
-//     const searchProgess = document.querySelector('.search-resault__progress');
-//     searchProgess.classList.remove('search-resault__progress_hidden');
-
-//     const searchResaultGrid = document.querySelector('.search-resault__grid');
-//     searchResaultGrid.classList.add('search-resault__grid_hidden');
-
-//     const searchResaultFail = document.querySelector('.search-resault__fail');
-//     searchResaultFail.classList.add('search-resault__fail_hidden');
-//     document.querySelector('.search-resault__show-more').classList.add('search-resault__show-more_hidden');
-
-
-//     const apiKey = '422aacd7b9af4b66bca82e0f23418cf8';
-
-//     //const url = `https://cors-anywhere.herokuapp.com/` + `https://newsapi.org/v2/everything?q=${topic}&apiKey=${apiKey}`;
-
-//     const url = `https://newsapi.org/v2/everything?q=${searchData}&apiKey=${apiKey}`;
-
-
-//     fetch(url)
-//         .then((res) => {
-//             if (res.ok) {
-//                 return res.json();
-//             }
-//             return Promise.reject(`Не удалось получить данные. Ошибка:${res.status}`);
-//         }).then((data) => {
-//             if (data.articles.length == 0) {
-//                 searchResaultFail.querySelector('.search-resault__fail_txt').innerHTML = 'К сожалению по вашему запросу ничего не найдено.';
-//                 searchResaultFail.querySelector('.search-resault__fail_header').innerHTML = 'Ничего не найдено';  
-
-//                 searchResaultFail.classList.remove('search-resault__fail_hidden');
-//             } else {
-//                 localStorage.setItem('search-result', JSON.stringify(data.articles));
-
-//                 document.querySelector('.search-resault__grid').innerHTML = '';
-
-//                 cardList.showCards();
-
-//                 searchResaultGrid.classList.remove('search-resault__grid_hidden');
-//             }
-
-
-//         }).catch(err => {
-//             console.warn(err);
-//             searchResaultFail.querySelector('.search-resault__fail_txt').innerHTML = 'Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.';
-//             searchResaultFail.querySelector('.search-resault__fail_header').innerHTML = 'Во время запроса произошла ошибка.';
-
-//             searchResaultFail.classList.remove('search-resault__fail_hidden');
-
-//         })
-//         .finally(() => {
-//             searchProgess.classList.add('search-resault__progress_hidden');
-
-//         });
-// }
-
 
 document.querySelector('.search-resault__button').addEventListener('click', () => {
     cardList.showCards();
 });
 
 
-
-
-
-
-// const newsApi = new NewsApi({
-//     url: `https://newsapi.org/v2/everything?q=${searchData}&apiKey=${apiKey}&pageSize=100`,
-// });
-
-// newsApi.getNews().
-// then(data => cardList.showCards(data))
-// .catch(err => {
-//     console.log(`Ошибка: ${err}`);
-//   });
-
-// search.addEventListener('submit', () => {
-//     event.preventDefault();
-
-//     const searchData = input.value;
-
-//     if (!searchData) {
-//         return;
-//     }
-
-//     const searchProgess = document.querySelector('.search-resault__progress');
-//     searchProgess.classList.remove('search-resault__progress_hidden');
-
-//     const searchResaultGrid = document.querySelector('.search-resault__grid');
-//     searchResaultGrid.classList.add('search-resault__grid_hidden');
-
-//     const searchResaultFail = document.querySelector('.search-resault__fail');
-//     searchResaultFail.classList.add('search-resault__fail_hidden');
-//     document.querySelector('.search-resault__show-more').classList.add('search-resault__show-more_hidden');
-//     newsApi.getNews();
-// //     newsApi.getNews().
-// // then(data => cardList.showCards(data))
-// // .catch(err => {
-// //     console.log(`Ошибка: ${err}`);
-// //   });
-
-// });
-
-// const url = `https://cors-anywhere.herokuapp.com/` + `https://newsapi.org/v2/everything?q=${searchData}&apiKey=${apiKey}`;
+// export  const searchData = input.value; 
+// export const card = new NewsCard();
