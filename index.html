@@ -9,7 +9,7 @@
     <title>Diploma Yandex</title>
     <link data-react-helmet="true" rel="icon" type="image/png" sizes="32x32" href="./images/Favicon.png">
     <!-- <link rel="icon" href="./images/favicon.ico" type="image/ico"> -->
-    <link rel="stylesheet" href="main.3d0c94319a5fcaf7d67d.css">
+    <link rel="stylesheet" href="main.ce5ca22148338a091ab0.css">
 </head>
 
 <body class="body">
@@ -29,97 +29,40 @@
                     новостях за прошедшую неделю.</p>
                 <form class="main__search">
                     <input type="text" class="main__input main__input_button" minlength="2" required placeholder="Введите тему новости">
-                    <button type="button" class="main__button">Искать</button>
+                    <span class="input-error"></span>
+                    <button type="submit" class="main__button">Искать</button>
                 </form>
             </main>
         </div>
         <section class="body__search-resault search-resault">
-            <!-- <div class="search-resault__progress">
+            <div class="search-resault__progress search-resault__progress_hidden">
                 <div class="circle-preloader"></div>
                 <p class="search-resault__progress_txt">Идет поиск новостей...</p>
-            </div> -->
-            <!-- <div class="search-resault__fail">
+            </div>
+
+            <div class="search-resault__fail search-resault__fail_hidden">
                 <img class="search-resault__fail_img" alt="Fail-img" src="./images/not-found_v1.png">
                 <h3 class="search-resault__fail_header">Ничего не найдено</h3>
                 <p class="search-resault__fail_txt">К сожалению по вашему запросу ничего не найдено.</p>
-            </div> -->
+            </div>
+
             <div class="search-resault__desc">
-                <div class="search-resault__header">
+                <div class="search-resault__header ">
                     <h2 class="search-resault search-resault_resault">Результаты поиска</h2>
                     <a class="search-resault search-resault_analytics"  href="./analytics.html">Посмотреть аналитику ></a>
                 </div>
+                
                 <div class="search-resault__container">
-                <div class="search-resault__grid">
-                    <div class="search-resault__grid search-resault__grid_card card">
-                        <img class="card__image" src="./images/image_08.png" alt="Parks">
-                        <div class="card__data">
-                            <h5 class="card__today">2 августа, 2019</h5>
-                            <h2 class="card__header">Национальное достояние – парки</h2>
-                            <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-                                складываться система
-                                национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к
-                                природе.</p>
-                            <a class="card__resource" href="#">Лента.ру</a>
-                        </div>
+                    <div class="search-resault__grid">
                     </div>
-                    <div class="search-resault__grid search-resault__grid_card card">
-                        <img class="card__image" src="./images/image_04.png" alt="Lesniye_ogonki">
-                        <div class="card__data">
-                            <h5 class="card__today">2 августа, 2019</h5>
-                            <h2 class="card__header">Лесные огоньки: история одной фотографии</h2>
-                            <p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, 
-                                чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-                            <a class="card__resource" href="#">Медуза</a>
-                        </div>
-                    </div>
-                    <div class="search-resault__grid search-resault__grid_card card">
-                        <img class="card__image" src="./images/image_07.png" alt="Taiga">
-                        <div class="card__data">
-                            <h5 class="card__today">2 августа, 2019</h5>
-                            <h2 class="card__header">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
-                            <p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их 
-                                сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-                            <a class="card__resource" href="#">Риа</a>
-                        </div>
-                    </div>
-                        <div class="search-resault__grid search-resault__grid_card card">
-                            <img class="card__image" src="./images/image_06.png" alt="Parks2">
-                            <div class="card__data">
-                                <h5 class="card__today">2 августа, 2019</h5>
-                                <h2 class="card__header">Национальное достояние – парки</h2>
-                                <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала
-                                    складываться система
-                                    национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к
-                                    природе.</p>
-                                <a class="card__resource" href="#">Лента.ру</a>
-                            </div>
-                        </div>
-                        <div class="search-resault__grid search-resault__grid_card card">
-                            <img class="card__image" src="./images/image_01.png" alt="Lesniye_ogonki-2">
-                            <div class="card__data">
-                                <h5 class="card__today">2 августа, 2019</h5>
-                                <h2 class="card__header">Лесные огоньки: история одной фотографии</h2>
-                                <p class="card__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, 
-                                    чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
-                                <a class="card__resource" href="#">Медуза</a>
-                            </div>
-                        </div>
-                        <div class="search-resault__grid search-resault__grid_card card">
-                            <img class="card__image" src="./images/image_05.png" alt="Taiga2">
-                            <div class="card__data">
-                                <h5 class="card__today">2 августа, 2019</h5>
-                                <h2 class="card__header">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
-                                <p class="card__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их 
-                                    сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-                                <a class="card__resource" href="#">Риа</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="search-resault__show-more">
+
+                    <div class="search-resault__show-more search-resault__show-more_hidden">
                         <button type="submit" class="search-resault__button">Показать еще</button>
                     </div>
+
                 </div>
             </div>
+
         </section>
         <section class="body__author main__author">
             <img class="author__photo" src="./images/image-03.jpg" alt="Author_Portrait">
@@ -149,7 +92,7 @@
     </div>
 
 </body>
-<script src="main.87f1352f5644680cbc04.js"></script>
+<script src="main.f0d205af8e49fe017bbe.js"></script>
 </body>
 
 </html>
