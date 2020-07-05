@@ -40,7 +40,7 @@ export default class SearchInput {
         this.removePreloader();
         document.querySelector('.search-resault__fail').classList.add('search-resault__fail_hidden');
         this.removeShowCards();
-        localStorage.setItem('search-resault', JSON.stringify([]));
+        localStorage.setItem('search-resault', JSON.stringify({articles: [], searchData: null}));
 
     }
     removeShowCards() {
@@ -57,12 +57,12 @@ export default class SearchInput {
 
     }
 
-    checkInputValidity(input, errorMessage) {
-        if (input.validity.valueMissing) {
-            return errorMessage.textContent = "Нужно ввести ключевое слово";
-        }
-        errorMessage.textContent = "";
-    }
+    // checkInputValidity(input, errorMessage) {
+    //     if (input.validity.valueMissing) {
+    //         return errorMessage.textContent = "Нужно ввести ключевое слово";
+    //     }
+    //     errorMessage.textContent = "";
+    // }
 }
 export {
     showFail

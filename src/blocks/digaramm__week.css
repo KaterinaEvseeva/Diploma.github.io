@@ -21,5 +21,7 @@
     background-color: blue;
     height: 100%;
     /* height: 20px; */
-    width: 75%;
+    width: 100%;
+    max-width: 0%;
+    transition: max-width 1s ease-in-out;
 }

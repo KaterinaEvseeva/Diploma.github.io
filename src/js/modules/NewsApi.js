@@ -2,13 +2,12 @@
 // // getNews возвращает список новостей на основе запроса.
 
 import constants from '../constants/Constants';
-const { ONE_DAY, ONE_WEEK } = constants;
+const { ONE_WEEK } = constants;
 
 export default class NewsApi {
-    constructor(options, SearchInput, showFail, _lastDay) {
+    constructor(options, SearchInput, showFail) {
         this.url = options.url;
         this.apiKey = options.apiKey;
-        this._lastDay = options.lastDay;
         this.currentDate = options.currentDate;
         this.searchResaultFail = options.searchResaultFail;
         this.searchProgess = options.searchProgess;

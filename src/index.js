@@ -1,5 +1,4 @@
 import './pages/style.css';
-// import './js/modules/DataStorage';
 import NewsCard from './js/components/NewsCard';
 import NewsCardList from './js/components/NewsCardList';
 import NewsApi from './js/modules/NewsApi';
@@ -14,6 +13,7 @@ const {
 const input = document.querySelector('.main__input');
 const search = document.querySelector('.main__search');
 const container = document.querySelector('.search-resault__grid');
+ const searchData = input.value;
 
 const card = new NewsCard();
 const cardList = new NewsCardList(container, card, []);
@@ -42,7 +42,7 @@ search.addEventListener('submit', () => {
     newsapi.getNews(searchData)
         .then(articles => {
             console.log(articles)
-            cardList.showCards(articles);
+            cardList.showCards(articles, searchData);
             if(articles.length == 0) {
                 return searchInput.showFail();
             }
@@ -63,3 +63,4 @@ document.querySelector('.search-resault__button').addEventListener('click', () =
 
 // export  const searchData = input.value; 
 // export const card = new NewsCard();
+export default searchData;
