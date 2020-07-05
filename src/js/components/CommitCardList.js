@@ -1,8 +1,3 @@
-import {
-    construct
-} from "core-js/fn/reflect";
-
-//  NewsCardList
 export default class CommitCardList {
     constructor(container, commitCard, commitData) {
         this.container = container;

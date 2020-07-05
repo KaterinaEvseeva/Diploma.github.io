@@ -1,8 +1,7 @@
-// // NewsApi. Отвечает за взаимодействие с NewsAPI. У класса есть конструктор, принимающий опции и единственный обязательный метод getNews. 
-// // getNews возвращает список новостей на основе запроса.
-
 import constants from '../constants/Constants';
-const { ONE_WEEK } = constants;
+const {
+    ONE_WEEK
+} = constants;
 
 export default class NewsApi {
     constructor(options, SearchInput, showFail) {
@@ -24,7 +23,6 @@ export default class NewsApi {
     getNews(searchData) {
         return new Promise((resolve, reject) => {
             fetch(`${this.proxyUrl}${this.url}?q=${searchData}${this._getDates()}&apiKey=${this.apiKey}&pageSize=100`, {
-                    // return fetch(`${this.proxyUrl}${this.url}?q=${searchData}&apiKey=${this.apiKey}&pageSize=100`, {
                     headers: this.headers,
                 })
                 .then((res) => {
@@ -39,4 +37,3 @@ export default class NewsApi {
         });
     }
 }
-

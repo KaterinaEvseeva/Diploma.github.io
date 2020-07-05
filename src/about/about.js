@@ -4,16 +4,14 @@ import '../pages/style.css';
 import '../../node_modules/swiper/css/swiper.css';
 import '../../node_modules/swiper/css/swiper.min.css';
 // import CommitCard from '../js/components/CommitCard';
-// import months from '../js/constants/Constants';
-// import { data } from 'autoprefixer';
 
-import {dateFormatted} from '../js/utils/DataFormatting';
-import {swiper} from '../js/utils/Swiper';
 
-// const months = [
-//     'Января', "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "АВгуста", "Сентября", "Октября", "Ноября", "Декабря"
-// ];
-// const dateFormatted = date =>  `${date.getDate()} ${months[date.getMonth()]}, ${date.getFullYear()}`;
+import {
+    dateFormatted
+} from '../js/utils/DataFormatting';
+import {
+    swiper
+} from '../js/utils/Swiper';
 
 function createGitCard(commitData) {
     return `
@@ -46,42 +44,7 @@ function getCommites() {
         .then((data) => {
             // console.log(data.map(createGitCard).join(''))
             document.querySelector('.git.swiper-wrapper').innerHTML = data.map(createGitCard).join('');
-            // const swiper = new Swiper();
             swiper.update();
-
-            // const swiper = new Swiper('.swiper-container', {
-            //     slidesPerView: 3,
-            //     spaceBetween: 16,
-            //     breakpoints: {
-            //         300: {
-            //             slidesPerView: 1,
-            //             spaceBetween: 20
-            //         },
-            //         450: {
-            //             slidesPerView: 2,
-            //             spaceBetween: 8
-            //         },
-            //         850: {
-            //             slidesPerView: 3,
-            //             spaceBetween: 16
-            //         }
-            //     },
-    
-            //     loop: true,
-            //     infinite: true,
-            //     grabCursor: true,
-            //     loopFillGroupWithBlank: true,
-            //     pagination: {
-            //         el: '.swiper-pagination',
-            //         // type: 'bullets',
-            //         clickable: true,
-            //     },
-            //     navigation: {
-            //         nextEl: '.swiper-button-next',
-            //         prevEl: '.swiper-button-prev',
-            //     }
-    
-            // });
         })
         .catch((err) => {
             alert('gitMistake')
@@ -89,6 +52,4 @@ function getCommites() {
         })
 }
 
-
 getCommites();
-// swiper.update();

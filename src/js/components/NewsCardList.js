@@ -1,4 +1,3 @@
-//  Класс списка карточек новостей.
 export default class NewsCardList {
     constructor(container, card, articles) {
         this.card = card;
@@ -10,7 +9,10 @@ export default class NewsCardList {
         if (articles) {
             this.articles = articles;
             this.container.innerHTML = ''
-            localStorage.setItem('search-resault', JSON.stringify({articles, searchData}));
+            localStorage.setItem('search-resault', JSON.stringify({
+                articles,
+                searchData
+            }));
             document.querySelector('.search-resault__grid').insertAdjacentHTML = '';
 
         }

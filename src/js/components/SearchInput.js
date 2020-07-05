@@ -10,9 +10,6 @@ export default class SearchInput {
     }
     showPreloader() {
         document.querySelector('.search-resault__progress').classList.remove('search-resault__progress_hidden');
-        // this.form.addEventListener('input', (event) => {
-        //     this.checkInputValidity(event.target, event.target.closest('div').querySelector('.error-message'));
-        // })
 
     }
     removePreloader() {
@@ -40,7 +37,10 @@ export default class SearchInput {
         this.removePreloader();
         document.querySelector('.search-resault__fail').classList.add('search-resault__fail_hidden');
         this.removeShowCards();
-        localStorage.setItem('search-resault', JSON.stringify({articles: [], searchData: null}));
+        localStorage.setItem('search-resault', JSON.stringify({
+            articles: [],
+            searchData: null
+        }));
 
     }
     removeShowCards() {
@@ -54,15 +54,8 @@ export default class SearchInput {
         searchResaultFail.querySelector('.search-resault__fail_header').textContent = 'Во время запроса произошла ошибка.';
         searchResaultFail.classList.remove('search-resault__fail_hidden');
         searchResaultHeader.classList.add('search-resault__header_hidden');
-
     }
 
-    // checkInputValidity(input, errorMessage) {
-    //     if (input.validity.valueMissing) {
-    //         return errorMessage.textContent = "Нужно ввести ключевое слово";
-    //     }
-    //     errorMessage.textContent = "";
-    // }
 }
 export {
     showFail

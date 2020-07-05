@@ -1,19 +1,18 @@
-// Аналогичен компоненту NewsCard только для карточек коммитов на странице «О проекте».
-
-// import { codePointAt } from "core-js/fn/string";
-import {dateFormatted} from '../constants/Constants';
+import {
+    dateFormatted
+} from '../constants/Constants';
 
 export default class CommitCard {
     constructor(date, name, email, message, avatar_url) {
-      this.date = date;
-      this.name = name;
-      this.email = email;
-      this.message = message;
-      this.avatar_url = avatar_url;
+        this.date = date;
+        this.name = name;
+        this.email = email;
+        this.message = message;
+        this.avatar_url = avatar_url;
     }
 
-     createGitCard(commitData) {
-      return `
+    createGitCard(commitData) {
+        return `
   <div class="git__card swiper-slide">
       <div class="git__card_container">
           <p class="git__day">${dateFormatted(new Date(commitData.commit.committer.date))}</p>
@@ -29,6 +28,6 @@ export default class CommitCard {
       </div>
   </div>
       `;
-  }
-  
+    }
+
 }

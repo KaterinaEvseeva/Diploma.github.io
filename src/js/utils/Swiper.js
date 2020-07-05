@@ -22,7 +22,6 @@ export const  swiper = new Swiper('.swiper-container', {
     loopFillGroupWithBlank: true,
     pagination: {
         el: '.swiper-pagination',
-        // type: 'bullets',
         clickable: true,
     },
     navigation: {
@@ -32,4 +31,3 @@ export const  swiper = new Swiper('.swiper-container', {
 
 });
 
-// export default swiper;
