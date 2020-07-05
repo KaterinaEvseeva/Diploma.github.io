@@ -8,7 +8,7 @@ export default class NewsCardList {
         console.log(articles)
         if (articles) {
             this.articles = articles;
-            this.container.innerHTML = ''
+            this.container.innerText = ''
             localStorage.setItem('search-resault', JSON.stringify({
                 articles,
                 searchData

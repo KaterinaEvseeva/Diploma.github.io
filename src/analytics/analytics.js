@@ -42,21 +42,21 @@ if (!data || !data.searchData) {
     }).slice(1);
 
 
-    let maxCnt = Math.max(...articlesStat.map(item => item.cnt));
-    console.log(maxCnt)
+    let maxCount = Math.max(...articlesStat.map(item => item.count));
+    console.log(maxCount)
 
-    if (maxCnt <= 40) {
-        maxCnt = 40;
+    if (maxCount <= 40) {
+        maxCount = 40;
     } else {
-        const tmp = Math.round(maxCnt / 100) * 100;
-        if (tmp < maxCnt) {
-            maxCnt = 100 + tmp;
+        const tmpCoefficient = Math.round(maxCount / 100) * 100;
+        if (tmpCoefficient < maxCount) {
+            maxCount = 100 + tmpCoefficient;
         } else {
-            maxCnt = tmp;
+            maxCount = tmpCoefficient;
         }
     }
 
-    const points = [0, Math.round(maxCnt * 0.25), Math.round(maxCnt * 0.5), Math.round(maxCnt * 0.75), maxCnt];
+    const points = [0, Math.round(maxCount * 0.25), Math.round(maxCount * 0.5), Math.round(maxCount * 0.75), maxCount];
     for (let i = 0; i < points.length; ++i) {
         document.querySelector(`.diagramm__scala_num:nth-child(${i + 1})`).innerText = points[i];
     }
@@ -66,7 +66,7 @@ if (!data || !data.searchData) {
         const diagramBox = document.querySelector(`.digaramm__week_box:nth-child(${i + 1})`);
         diagramBox.querySelector('.diagramm__week_day').innerText = `${articlesStat[i].date}, ${articlesStat[i].dayWeek}`;
         setTimeout(() => {
-            diagramBox.querySelector('.digaramm__week_quantity').style.maxWidth = `${Math.round(articlesStat[i].cnt / maxCnt * 100)}%`;
+            diagramBox.querySelector('.digaramm__week_quantity').style.maxWidth = `${Math.round(articlesStat[i].count / maxCount * 100)}%`;
         }, 100);
     }
 }
@@ -85,7 +85,7 @@ function articlesStatistics(searchData, articles) {
             date: dt.getDate(),
             month: dt.getMonth(),
             year: dt.getFullYear(),
-            cnt: 0
+            count: 0
         }
 
         dt = new Date(dt.valueOf() - 1000 * 60 * 60 * 24);
@@ -104,8 +104,8 @@ function articlesStatistics(searchData, articles) {
         }
         const titleCountArticle = [...article.title.matchAll(new RegExp(`( |^)${searchData}`, 'ig'))].length;
 
-        weekDays[key].cnt += titleCountArticle;
-        weekDays[key].cnt += [...article.description.matchAll(new RegExp(`( |^)${searchData}`, 'ig'))].length;
+        weekDays[key].count += titleCountArticle;
+        weekDays[key].count += [...article.description.matchAll(new RegExp(`( |^)${searchData}`, 'ig'))].length;
 
         titleCount += titleCountArticle;
     }

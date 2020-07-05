@@ -6,7 +6,7 @@ export default class CommitCardList {
     }
 
     showCommitCards(commitData) {
-        document.querySelector('.git.swiper-wrapper').innerHTML = data.map(createGitCard).join('');
+        document.querySelector('.git.swiper-wrapper').innerText = data.map(createGitCard).join('');
 
     }
 }
