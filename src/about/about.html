@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>About</title>
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="32x32" href="./images/Favicon.png">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css %>">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body class="body">
+    <div class="body__container container">
+        <header class="body__header header header_white">
+            <h5 class="header__logo_black">NewsAnalyzer</h5>
+            <div class="header__links__customer">
+                <a href="./index.html" class="header__links__customer header__link_main">Главная</a>
+                <a href="#" class="header__links__customer header__link_about">О проекте</a>
+            </div>
+        </header>
+        <section class="body__customers customers">
+            <h2 class="customers__header">Клиентам</h2>
+            <div class="customers__container">
+                <p class="customers__paragrapg">Этот сайт — дипломный проект студента Яндекс.Практикума.
+                    Его цель — показать, чему научился студент, какими технологиями владеет. </p>
+                <p class="customers__paragrapg">Вёрстка сайта выполнена по методологии БЭМ. Это делает сайт
+                    гибким и масштабируемым. Кроме того, добавлять новые страницы и функциональность проще и быстрее,
+                    чем в проектах, выполненных по другим методологиям. Также сайт проще и дешевле поддерживать.</p>
+                <p class="customers__paragrapg">Карточки с новостями приходят с сервера и обрабатываются асинхронно.
+                    То есть сайт продолжает работать, пока от сервера приходит ответ. Это повышает удобство
+                    использования сервиса.</p>
+                <p class="customers__paragrapg">При создании проекта была использована сборка технологией Webpack. Это
+                    современный
+                    подход к разработке сайтов. Код оптимизируется, а значит, сайт работает быстрее. Также сайт работает
+                    в старых
+                    браузерах. Даже если посетители — пользователи старых операционных систем, у них не будет проблем с
+                    отображением.
+                    А значит, потенциальная аудитория возрастает.</p>
+                <p class="customers__paragrapg">Проект был проверен экспертами Яндекс.Практикума. Если вашему бизнесу
+                    нужен сайт,
+                    мы рекомендуем обратиться к этому студенту.</p>
+            </div>
+        </section>
+        <section class="body__technologies technologies">
+            <div class="technologies__container">
+                <h2 class="technologies__header">Используемые технологии</h2>
+                <div class="technologies__pictures">
+                    <div class="technologies__card">
+                        <h3 class="technologies__name">HTML</h3>
+                        <img class="technologies__picture" src="<%=require('../images/HTML.png')%>" alt="HTML">
+                    </div>
+                    <div class="technologies__card">
+                        <h3 class="technologies__name">CSS</h3>
+                        <img class="technologies__picture" src="<%=require('../images/CSS.png')%>" alt="CSS">
+                    </div>
+                    <div class="technologies__card">
+                        <h3 class="technologies__name">Java Script</h3>
+                        <img class="technologies__card technologies__picture_js" src="<%=require('../images/js.png')%>"
+                            alt="JS">
+                    </div>
+                    <div class="technologies__card">
+                        <h3 class="technologies__name">Webpack</h3>
+                        <img class="technologies__card technologies__picture_webpack"
+                            src="<%=require('../images/Webpack.png')%>" alt="Webpack">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="body__author main__author">
+            <img class="author__photo" src="<%=require('../images/Я_корпоратив.jpg')%>" alt="Author_Portrait">
+            <div class="author__about">
+                <h2 class="author__about author__about_title">Об авторе</h2>
+                <p class="author__about author__about_detail">Привет, меня зовут Екатерина Евсеева, я хочу стать
+                    фронтенд-разработчиком и это мой дипломный проект.
+                    В Дипломе используются полученные в процессе обучения знания и навыки, необходимые современному
+                    разработчику. При создании сайта использовались технологии: HTML, CSS, JavaScript, Fetch запросы, работа со сторонними API,
+                    Адаптивная вёрстка, ES6 классы, Webpack, GIT. Наименование классов по БЕМу, так же испозьзовалась библиотека Swiper.</p>
+                <p class="author__about author__about_detail">Процесс обучения в Яндекс динамичнный, поэтому и очень интересный, упор сделан на понимание процесса и принципов работы JaVascript.</p>
+            </div>
+        </section>
+        <section class="body__git git">
+            <div class="search-resault__description">
+                <div class="search-resault search-resault__header_git">
+                    <h2 class="search-resault search-resault_resault resault_resault-git">История коммитов из GitHub
+                    </h2>
+                    <div class="git__subtitle">
+                        <a class="search-resault search-resault_analytics analytics_githab" target="_blank"
+                            href="https://github.com/KaterinaEvseeva/Diploma.github.io">Открыть в Github </a>
+                        <a class="analytics_githab-span"> ></a>
+                    </div>
+                </div>
+                <div class="git__history swiper-container">
+                    <div class="git swiper-wrapper">
+                    </div>
+                    <img class="swiper-button-prev" alt="Nav_button" src="<%=require('../images/slider-control.svg')%>">
+                    <img class="swiper-button-next" alt="Nav_button"
+                        src="<%=require('../images/slider-control-2.svg')%>">
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </section>
+        <footer class="body__footer footer">
+            <span class="footer__copyright">©2019 Supercite</span>
+            <ul class="footer__links">
+                <li class="footer__link"><a class="footer__link footer__link_link" href="./index.html">Главная</a></li>
+                <li class="footer__link"><a class="footer__link footer__link_link" href="./about.html">О проекте</a>
+                </li>
+                <li class="footer__link" href="#">Яндекс.Практикум</li>
+            </ul>
+            <div class="footer__social">
+                <a class="footer__social footer__social_git" target="_blank"
+                    href="https://github.com/KaterinaEvseeva/Diploma.github.io">
+                    <img class="footer__social footer__social_git-icon" src="<%=require('../images/GH.png')%>"
+                        alt="Github-icon"></a>
+                <a class="footer__social footer__social_FB" target="_blank"
+                    href="https://www.facebook.com/profile.php?id=1841680444">
+                    <img class="footer__social footer__social_FB-icon" src="<%=require('../images/FB.png')%>"
+                        alt="FB-icon"></a>
+            </div>
+        </footer>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</body>
+<script src="<%= htmlWebpackPlugin.files.chunks.about.entry %>"></script>
+</body>
+
+</html>

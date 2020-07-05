@@ -1,0 +1,14 @@
+.card__data {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 24px;
+}
+
+@media screen and (max-width: 768px) {
+    .card__data {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 12px;
+    
+    }
+}

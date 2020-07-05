@@ -1,0 +1,15 @@
+.footer__social_git-icon {
+    padding-right: 28px;
+}
+
+@media screen and (max-width: 900px) {
+    .footer__social_git-icon {
+        padding-right: 15px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .footer__social_git-icon {
+        padding-right: 28px;
+    }
+}

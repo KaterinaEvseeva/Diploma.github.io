@@ -1,0 +1,25 @@
+.search-resault__container {
+    margin-left: 104px;
+    margin-right: 104px;
+}
+
+@media screen and (max-width: 1024px) {
+    .search-resault__container {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .search-resault__container {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .search-resault__container {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}

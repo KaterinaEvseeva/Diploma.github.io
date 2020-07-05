@@ -1,0 +1,8 @@
+.swiper-pagination {
+    padding-top: 48px;
+    left: 50%;
+    width: 40px;
+    display: flex;
+    justify-content: space-between;
+
+}

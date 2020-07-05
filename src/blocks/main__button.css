@@ -1,0 +1,36 @@
+.main__button {
+    background: #2F71E5;
+    border: 2F71E5;
+    box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+    border-radius: 100px;
+    font-family: Roboto, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    width: 168px;
+    cursor: pointer;
+}
+
+.main__button:active {
+background: #2A65CC;
+border: 2F71E5;
+}
+
+.main__button:hover {
+    background: #347EFF;
+}
+@media screen and (max-width: 768px) {
+    .main__button {
+        width: 160px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main__button {
+        width: 288px;
+        height: 62px;
+        margin-top: 16px;
+    }
+}

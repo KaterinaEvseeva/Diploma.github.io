@@ -1,0 +1,8 @@
+input:hover {
+    color: black;
+    border: none;
+}
+
+input:focus {
+    border: none;
+}

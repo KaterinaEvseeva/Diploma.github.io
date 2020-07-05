@@ -1,0 +1,14 @@
+@media screen and (max-width: 768px) {
+    .search-resault_analytics.analytics_githab {
+        padding-right: 20px;
+        padding-bottom: 8px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .search-resault_analytics.analytics_githab {
+        justify-content: center;
+        margin-top: 15px;
+        background: transparent;
+    }
+}

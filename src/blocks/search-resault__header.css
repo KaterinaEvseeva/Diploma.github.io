@@ -1,0 +1,36 @@
+.search-resault__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 104px;
+    padding-right: 104px;
+    height: 190px;
+}
+@media screen and (max-width: 1024px) {
+    .search-resault__header {
+        height: 150px;
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .search-resault__header {
+        height: 106px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+} 
+
+@media screen and (max-width: 500px) {
+    .search-resault__header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding-left: 16px;
+        margin-bottom: 37px;
+    }
+}
+.search-resault__header_hidden {
+    display: none;
+}

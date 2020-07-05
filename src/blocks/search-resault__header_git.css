@@ -1,0 +1,38 @@
+.search-resault__header_git {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 104px;
+    padding-right: 104px;
+    height: 182px;
+}
+
+@media screen and (max-width: 1024px) {
+    .search-resault__header_git {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .search-resault__header_git {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .search-resault__header_git {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .search-resault__header_git {
+        padding-left: 16px;
+        padding-right: 40px;
+        height: 168px;
+    }
+}

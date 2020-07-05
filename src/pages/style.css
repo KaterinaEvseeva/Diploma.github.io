@@ -1,0 +1,69 @@
+/* @import "../vendor/normalize.css"; */
+@import '../../node_modules/normalize.css/normalize.css';
+@import "../fonts/roboto.css";
+@import '../blocks/header__logo.css';
+@import '../blocks/header.css';
+@import '../blocks/body__container_picture.css';
+@import '../blocks/header__links.css';
+@import '../blocks/header__link_main.css';
+@import '../blocks/border.css';
+@import '../blocks/main.css';
+@import '../blocks/main__title.css';
+@import '../blocks/main__instruction.css';
+@import '../blocks/main__search.css';
+@import '../blocks/main__input.css';
+@import '../blocks/main__button.css';
+@import '../blocks/main__author.css';
+@import '../blocks/author__photo.css';
+@import '../blocks/body__container_rest.css';
+@import '../blocks/author__about_title.css';
+@import '../blocks/author__about_detail.css';
+@import '../blocks/author__about.css';
+@import '../blocks/footer.css';
+@import '../blocks/footer__copyright.css';
+@import '../blocks/footer__link.css';
+@import '../blocks/footer__social_git-icon.css';
+@import '../blocks/search-resault__progress.css';
+@import '../blocks/search-resault__progress_txt.css';
+@import '../blocks/circle-preloader.css';
+@import '../blocks/search-resault__fail.css';
+@import '../blocks/search-resault.css';
+@import '../blocks/search-resault__fail_header.css';
+@import '../blocks/search-resault__fail_img.css';
+@import '../blocks/search-resault__fail_txt.css';
+@import '../blocks/search-resault__header.css';
+@import '../blocks/search-resault_resault.css';
+@import '../blocks/search-resault_analytics.css';
+@import '../blocks/card__data.css';
+@import '../blocks/card__image.css';
+@import '../blocks/card__today.css';
+@import '../blocks/card__header.css';
+@import '../blocks/card__text.css';
+@import '../blocks/card__resource.css';
+@import '../blocks/search-resault__grid.css';
+@import '../blocks/search-resault__container.css';
+@import '../blocks/search-resault__show-more.css';
+@import '../blocks/search-resault__button.css';
+@import '../blocks/search-resault__grid_card.css';
+@import '../blocks/search-resault__desc.css';
+@import '../blocks/footer__links.css';
+@import '../blocks/input.css';
+
+.container {
+    margin: auto;
+    max-width: 1440px;
+}
+.body {
+    margin: auto;
+}
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .container {
+        max-width: 320px;
+    }
+}

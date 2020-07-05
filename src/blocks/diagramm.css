@@ -1,0 +1,29 @@
+.diagramm {
+    background: #F5F6F7;
+    height: 866px;
+    padding-left: 104px;
+    padding-right: 104px;
+}
+
+@media screen and (max-width: 900px) {
+    .diagramm {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .diagramm {
+        height: 786px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .diagramm {
+        height: 478px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

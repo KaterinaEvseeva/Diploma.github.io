@@ -1,0 +1,14 @@
+.diagramm__subtitle_data {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    color: #B6BCBF;
+    margin: 0;
+    padding-right: 60px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+}

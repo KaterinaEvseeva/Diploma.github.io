@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Diploma Yandex</title>
+    <link data-react-helmet="true" rel="icon" type="image/png" sizes="32x32" href="./images/Favicon.png">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+</head>
+
+<body class="body">
+    <div class="body__container container">
+        <div class="body__container body__container_picture">
+            <header class="body__header header">
+                <h5 class="header__logo">NewsAnalyzer</h5>
+                <div class="header__links">
+                    <a href="#" class="header__links header__link_main">Главная</a>
+                    <a href="./about.html" class="header__links header__link_about">О проекте</a>
+                </div>
+            </header>
+            <hr class="body__border border">
+            <main class="body__main main">
+                <h1 class="main__title">Что в мире творится?</h1>
+                <p class="main__instruction">Введите в поиске любую тему и узнайте, насколько популярной она была в
+                    новостях за прошедшую неделю.</p>
+                <form class="main__search">
+                    <input type="text" class="main__input main__input_button" minlength="2" required
+                        placeholder="Введите тему новости">
+                    <span class="input-error"></span>
+                    <button type="submit" class="main__button">Искать</button>
+                </form>
+            </main>
+        </div>
+        <section class="body__search-resault search-resault">
+            <div class="search-resault__progress search-resault__progress_hidden">
+                <div class="circle-preloader"></div>
+                <p class="search-resault__progress_txt">Идет поиск новостей...</p>
+            </div>
+
+            <div class="search-resault__fail search-resault__fail_hidden">
+                <img class="search-resault__fail_img" alt="Fail-img" src="<%=require('./images/not-found_v1.png')%>">
+                <h3 class="search-resault__fail_header">Ничего не найдено</h3>
+                <p class="search-resault__fail_txt">К сожалению по вашему запросу ничего не найдено.</p>
+            </div>
+
+            <div class="search-resault__desc">
+                <div class="search-resault__header ">
+                    <h2 class="search-resault search-resault_resault">Результаты поиска</h2>
+                    <a class="search-resault search-resault_analytics" href="./analytics.html">Посмотреть аналитику
+                        ></a>
+                </div>
+
+                <div class="search-resault__container">
+                    <div class="search-resault__grid">
+                    </div>
+
+                    <div class="search-resault__show-more search-resault__show-more_hidden">
+                        <button type="submit" class="search-resault__button">Показать еще</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <section class="body__author main__author">
+            <img class="author__photo" src="<%=require('./images/image-03.jpg')%>" alt="Author_Portrait">
+            <div class="author__about">
+                <h2 class="author__about author__about_title">Об авторе</h2>
+                <p class="author__about author__about_detail">Это блок с описанием автора проекта. Здесь следует
+                    указать,
+                    как вас зовут, чем вы занимаетесь,
+                    какими технологиями разработки владеете.</p>
+                <p class="author__about author__about_detail">Также можно рассказать о процессе обучения в Практикуме,
+                    чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+            </div>
+        </section>
+        <footer class="body__footer footer">
+            <span class="footer__copyright">©2019 Supercite</span>
+            <ul class="footer__links">
+                <li class="footer__link"><a class="footer__link footer__link_link" href="./index.html">Главная</a></li>
+                <li class="footer__link"><a class="footer__link footer__link_link" href="./about.html">О проекте</a>
+                </li>
+                <li class="footer__link"><a class="footer__link footer__link_link" href="#">Яндекс.Практикум</a></li>
+            </ul>
+            <div class="footer__social">
+                <a class="footer__social footer__social_git" target="_blank"
+                    href="https://github.com/KaterinaEvseeva/Diploma.github.io">
+                    <img class="footer__social footer__social_git-icon" src="<%=require('./images/GH.png')%>"
+                        alt="Github-icon"></a>
+                <a class="footer__social footer__social_FB" target="_blank"
+                    href="https://www.facebook.com/profile.php?id=1841680444">
+                    <img class="footer__social footer__social_FB-icon" src="<%=require('./images/FB.png')%>"
+                        alt="FB-icon"></a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+<script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+
+</html>

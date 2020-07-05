@@ -1,0 +1,34 @@
+.main__input {
+    font-family: Roboto, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #B6BCBF;
+    padding-left: 24px;
+    border: transparent;
+    border-radius: inherit;
+}
+
+
+
+.main__input:active:hover {
+    border: none;
+}
+.main__input:valid:not(:placeholder-shown) {
+	border-color: #ffdb4d;
+}
+
+.main__input:invalid:not(:placeholder-shown) {
+	border-color: #df4b41;
+}
+
+
+@media screen and (max-width: 500px) {
+    .main__input {
+        padding-left: 16px;
+        width: 272px;
+        height: 56px;
+
+    }
+}

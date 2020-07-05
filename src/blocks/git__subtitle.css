@@ -1,0 +1,25 @@
+@media screen and (max-width: 1440px) {
+    .git__subtitle {
+        display: flex;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .git__subtitle {
+        display: block;
+text-align: right;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .git__subtitle {
+        border: 1px solid black;
+        width: 288px;
+        height: 56px;
+        position: absolute;
+        bottom: 32px;
+        box-sizing: border-box;
+        border-radius: 80px;
+    }
+}

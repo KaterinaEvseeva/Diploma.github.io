@@ -1,0 +1,12 @@
+.search-resault__progress_txt {
+    font-family: Roboto, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #B6BCBF;
+    position: absolute;
+    top: 178px;
+    left: 45%;
+}

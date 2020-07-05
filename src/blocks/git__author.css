@@ -1,0 +1,17 @@
+.git__author {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    color: #1A1B22;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .git__author {
+        font-size: 20px;
+        line-height: 30px;
+
+    }
+}

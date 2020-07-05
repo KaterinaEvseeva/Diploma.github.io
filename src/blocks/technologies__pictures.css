@@ -1,0 +1,18 @@
+.technologies__pictures {
+    display: flex;
+    justify-content: space-between;
+    width: 580px;
+}
+
+@media screen and (max-width: 768px) {
+    .technologies__pictures {
+        padding-right: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+   .technologies__pictures {
+       flex-wrap: wrap;
+   }
+}

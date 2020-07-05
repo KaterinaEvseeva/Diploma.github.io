@@ -1,0 +1,12 @@
+.search-resault__progress {
+    height: 282px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.search-resault__progress_hidden {
+    display: none;
+}

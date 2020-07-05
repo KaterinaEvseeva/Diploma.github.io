@@ -1,0 +1,26 @@
+.digaramm__week {
+    height: 540px;
+    /* width: 104px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 16px;
+}
+
+@media screen and (max-width: 320px) {
+    .digaramm__week {
+        height: 328px;
+        width: 96px;
+        padding-top: 0;
+    }
+}
+.digaramm__week_box {
+    display: flex;
+}
+.digaramm__week_quantity {
+    background-color: blue;
+    height: 100%;
+    width: 100%;
+    max-width: 0%;
+    transition: max-width 1s ease-in-out;
+}
