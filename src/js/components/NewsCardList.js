@@ -1,3 +1,7 @@
+import {searchResaultGrid} from '../constants/Constants';
+import {searchResaultHeader} from '../constants/Constants';
+import constants from '../constants/Constants';
+const {CARDS_PER_STRING} = constants;
 export default class NewsCardList {
     constructor(container, card, articles) {
         this.card = card;
@@ -13,17 +17,18 @@ export default class NewsCardList {
                 articles,
                 searchData
             }));
-            document.querySelector('.search-resault__grid').insertAdjacentHTML = '';
+
+            while (searchResaultGrid.firstChild) {
+                searchResaultGrid.removeChild(searchResaultGrid.firstChild)
+            };
 
         }
 
         console.log(this.articles)
+        this.container.innerHTML += this.articles.slice(this.container.childElementCount, this.container.childElementCount + CARDS_PER_STRING).map(this.card.create).join('');
 
-        this.container.innerHTML += this.articles.slice(this.container.childElementCount, this.container.childElementCount + 3).map(this.card.create).join('');
-
-        const searchResaultGrid = document.querySelector('.search-resault__grid');
         searchResaultGrid.classList.remove('search-resault__grid_hidden');
-        document.querySelector('.search-resault__header').classList.remove('search-resault__header_hidden');
+        searchResaultHeader.classList.remove('search-resault__header_hidden');
     }
 
     get length() {

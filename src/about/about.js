@@ -43,8 +43,9 @@ function getCommites() {
         })
         .then((data) => {
             // console.log(data.map(createGitCard).join(''))
-            document.querySelector('.git.swiper-wrapper').innerHTML = data.map(createGitCard).join('');
+            document.querySelector('.git.swiper-wrapper').insertAdjacentHTML("afterBegin", data.map(createGitCard).join(''));
             swiper.update();
+
         })
         .catch((err) => {
             alert('gitMistake')

@@ -4,6 +4,18 @@ import NewsCardList from './js/components/NewsCardList';
 import NewsApi from './js/modules/NewsApi';
 import constants from './js/constants/Constants';
 import SearchInput from './js/components/SearchInput';
+import {
+    searchResaultGrid
+} from './js/constants/Constants';
+import {
+    searchResaultProgress
+} from './js/constants/Constants';
+import {
+    searchResaultShowMore
+} from './js/constants/Constants';
+import {
+    searchResaultFail
+} from './js/constants/Constants';
 
 const {
     NEWSAPI_KEY,
@@ -12,11 +24,10 @@ const {
 
 const input = document.querySelector('.main__input');
 const search = document.querySelector('.main__search');
-const container = document.querySelector('.search-resault__grid');
- const searchData = input.value;
+const searchData = input.value;
 
 const card = new NewsCard();
-const cardList = new NewsCardList(container, card, []);
+const cardList = new NewsCardList(searchResaultGrid, card, []);
 const newsapi = new NewsApi({
     url: NEWSAPI_URL,
     apiKey: NEWSAPI_KEY,
@@ -26,8 +37,8 @@ const newsapi = new NewsApi({
     }
 });
 
-const searchInput = new SearchInput(container, cardList, document.querySelector('.search-resault__progress'), document.querySelector('.search-resault'),
-    document.querySelector('.search-resault__show-more'), document.querySelector('.search-resault__fail')
+const searchInput = new SearchInput(searchResaultGrid, cardList, searchResaultProgress,
+    document.querySelector('.search-resault'), searchResaultShowMore, searchResaultFail
 );
 
 search.addEventListener('submit', () => {
@@ -35,15 +46,15 @@ search.addEventListener('submit', () => {
     searchInput.removeAll();
     searchInput.showPreloader();
 
-     const searchData = input.value;
+    const searchData = input.value;
     if (!searchData) {
         searchInput.showFail();
-    } 
+    }
     newsapi.getNews(searchData)
         .then(articles => {
             console.log(articles)
             cardList.showCards(articles, searchData);
-            if(articles.length == 0) {
+            if (articles.length == 0) {
                 return searchInput.showFail();
             }
             searchInput.showMoreResault();
@@ -60,7 +71,4 @@ document.querySelector('.search-resault__button').addEventListener('click', () =
     cardList.showCards();
 });
 
-
-// export  const searchData = input.value; 
-// export const card = new NewsCard();
 export default searchData;

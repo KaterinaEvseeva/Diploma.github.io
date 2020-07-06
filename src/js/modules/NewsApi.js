@@ -4,16 +4,13 @@ const {
 } = constants;
 
 export default class NewsApi {
-    constructor(options, SearchInput, showFail) {
+    constructor(options) {
         this.url = options.url;
         this.apiKey = options.apiKey;
         this.currentDate = options.currentDate;
         this.searchResaultFail = options.searchResaultFail;
         this.searchProgess = options.searchProgess;
         this.headers = options.headers;
-        this.proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-        this.SearchInput = SearchInput;
-        this.showFail = showFail;
     }
 
     _getDates() {
@@ -22,7 +19,7 @@ export default class NewsApi {
     }
     getNews(searchData) {
         return new Promise((resolve, reject) => {
-            fetch(`${this.proxyUrl}${this.url}?q=${searchData}${this._getDates()}&apiKey=${this.apiKey}&pageSize=100`, {
+            fetch(`${this.url}?q=${searchData}${this._getDates()}&apiKey=${this.apiKey}&pageSize=100`, {
                     headers: this.headers,
                 })
                 .then((res) => {
