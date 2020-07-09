@@ -7,8 +7,6 @@ import {
     months
 } from '../js/constants/Constants';
 
-
-
 const data = JSON.parse(localStorage.getItem('search-resault'));
 console.log(data);
 

@@ -1,4 +1,4 @@
-export const  swiper = new Swiper('.swiper-container', {
+export const   swiper = new Swiper('.swiper-container', {
     slidesPerView: 3,
     spaceBetween: 16,
     breakpoints: {
@@ -31,3 +31,4 @@ export const  swiper = new Swiper('.swiper-container', {
 
 });
 
+export default swiper;

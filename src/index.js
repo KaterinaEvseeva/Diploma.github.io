@@ -43,6 +43,7 @@ const searchInput = new SearchInput(searchResaultGrid, cardList, searchResaultPr
 
 search.addEventListener('submit', () => {
     event.preventDefault();
+    // searchInput.removeShowResaultHeader();
     searchInput.removeAll();
     searchInput.showPreloader();
 
@@ -70,5 +71,3 @@ search.addEventListener('submit', () => {
 document.querySelector('.search-resault__button').addEventListener('click', () => {
     cardList.showCards();
 });
-
-export default searchData;

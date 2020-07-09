@@ -9,7 +9,6 @@ export default class NewsCardList {
         this.articles = articles;
     }
     showCards(articles, searchData) {
-        console.log(articles)
         if (articles) {
             this.articles = articles;
             this.container.innerText = ''
@@ -23,8 +22,6 @@ export default class NewsCardList {
             };
 
         }
-
-        console.log(this.articles)
         this.container.innerHTML += this.articles.slice(this.container.childElementCount, this.container.childElementCount + CARDS_PER_STRING).map(this.card.create).join('');
 
         searchResaultGrid.classList.remove('search-resault__grid_hidden');

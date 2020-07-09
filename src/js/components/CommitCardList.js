@@ -1,12 +1,16 @@
+import {
+    swiper
+} from '../utils/Swiper';
 export default class CommitCardList {
-    constructor(container, commitCard, commitData) {
+    constructor(container, commitCard) {
         this.container = container;
         this.commitCard = commitCard;
-        this.commitData = commitData;
-    }
-
-    showCommitCards(commitData) {
-        document.querySelector('.git.swiper-wrapper').innerText = data.map(createGitCard).join('');
 
     }
+
+    showCommitCards(data) {
+        document.querySelector('.git.swiper-wrapper').insertAdjacentHTML("afterBegin", data.map(this.commitCard.createGitCard).join(''));
+        swiper.update();
+    }
+
 }

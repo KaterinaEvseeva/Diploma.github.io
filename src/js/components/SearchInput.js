@@ -1,11 +1,21 @@
 // SearchInput. Конструктор класса принимает колбэк-функцию, исполняемую при сабмите формы поиска. В колбэк-функции описывается взаимодействие с API, 
 // списком карточек и локальным браузерным хранилищем. Полученные от NewsAPI данные должны приводить к обновлению хранилища, а список карточек отображать 
 // полученные данные на странице. Кроме этого у класса SearchInput должны быть методы для валидации формы поиска и методы, управляющие работой кнопки сабмита.
-import {searchResaultGrid} from '../constants/Constants';
-import {searchResaultProgress} from '../constants/Constants';
-import {searchResaultShowMore} from '../constants/Constants';
-import {searchResaultFail} from '../constants/Constants';
-import {searchResaultHeader} from '../constants/Constants';
+import {
+    searchResaultGrid
+} from '../constants/Constants';
+import {
+    searchResaultProgress
+} from '../constants/Constants';
+import {
+    searchResaultShowMore
+} from '../constants/Constants';
+import {
+    searchResaultFail
+} from '../constants/Constants';
+import {
+    searchResaultHeader
+} from '../constants/Constants';
 
 export default class SearchInput {
     constructor(api, form, cardList, container) {
@@ -42,6 +52,8 @@ export default class SearchInput {
         this.removePreloader();
         searchResaultFail.classList.add('search-resault__fail_hidden');
         this.removeShowCards();
+        this.removeShowResaultHeader();
+
         localStorage.setItem('search-resault', JSON.stringify({
             articles: [],
             searchData: null
@@ -51,6 +63,13 @@ export default class SearchInput {
     removeShowCards() {
         searchResaultGrid.classList.add('search-resault__grid_hidden');
     }
+
+    removeShowResaultHeader() {
+        document.querySelector('.search-resault__desc').classList.add('search-resault__desc_hidden');
+        searchResaultHeader.classList.add('search-resault__header_hidden');
+
+    }
+
     showBadRequest() {
         searchResaultFail.querySelector('.search-resault__fail_txt').textContent = 'Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.';
         searchResaultFail.querySelector('.search-resault__fail_header').textContent = 'Во время запроса произошла ошибка.';

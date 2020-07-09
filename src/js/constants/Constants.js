@@ -8,6 +8,7 @@ const constants = {
    NEWSAPI_KEY: '422aacd7b9af4b66bca82e0f23418cf8',
    NEWSAPI_URL: 'https://praktikum.tk/news/v2/everything',
    CARDS_PER_STRING: 3,
+   GITHUB_API_URL: 'https://api.github.com/repos/KateinaEvseeva/Diploma.github.io/commits?sha=level-1',
    // NEWSAPI_KEY: 'ced98f7ead66496eb2bb2486228275c9',
 
 };

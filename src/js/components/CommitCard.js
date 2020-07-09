@@ -1,6 +1,6 @@
 import {
     dateFormatted
-} from '../constants/Constants';
+} from '../utils/DataFormatting';
 
 export default class CommitCard {
     constructor(date, name, email, message, avatar_url) {
@@ -24,7 +24,7 @@ export default class CommitCard {
                   <h5 class="git__email">${commitData.commit.committer.email}</h5>
               </div>
           </div>
-          <p class="git__text">${commitData.commit.email}</p>
+          <p class="git__text">${commitData.commit.message}</p>
       </div>
   </div>
       `;
