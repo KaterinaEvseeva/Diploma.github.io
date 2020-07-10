@@ -9,3 +9,6 @@
         position: relative;
     }
 }
+.search-resault__desc_hidden {
+    display: none;
+}

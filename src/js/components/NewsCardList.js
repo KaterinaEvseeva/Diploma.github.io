@@ -1,6 +1,7 @@
 import {searchResaultGrid} from '../constants/Constants';
 import {searchResaultHeader} from '../constants/Constants';
 import constants from '../constants/Constants';
+import {searchResaultDesc} from '../constants/Constants';
 const {CARDS_PER_STRING} = constants;
 export default class NewsCardList {
     constructor(container, card, articles) {
@@ -26,6 +27,8 @@ export default class NewsCardList {
 
         searchResaultGrid.classList.remove('search-resault__grid_hidden');
         searchResaultHeader.classList.remove('search-resault__header_hidden');
+        searchResaultDesc.classList.remove('search-resault__desc_hidden');
+
     }
 
     get length() {

@@ -3,6 +3,9 @@
     height: 606px;
 }
 
+.search-resault__description_hidden {
+    display: none;
+}
 @media screen and (max-width: 320px) {
     .search-resault__description {
         background: #E5E5E5;

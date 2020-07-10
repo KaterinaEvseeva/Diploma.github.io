@@ -43,7 +43,6 @@ const searchInput = new SearchInput(searchResaultGrid, cardList, searchResaultPr
 
 search.addEventListener('submit', () => {
     event.preventDefault();
-    // searchInput.removeShowResaultHeader();
     searchInput.removeAll();
     searchInput.showPreloader();
 
@@ -53,7 +52,8 @@ search.addEventListener('submit', () => {
     }
     newsapi.getNews(searchData)
         .then(articles => {
-            console.log(articles)
+            
+            // console.log(articles)
             cardList.showCards(articles, searchData);
             if (articles.length == 0) {
                 return searchInput.showFail();
