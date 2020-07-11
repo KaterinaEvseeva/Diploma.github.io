@@ -6,44 +6,32 @@ import {searchResaultProgress} from '../constants/Constants';
 import {searchResaultShowMore} from '../constants/Constants';
 import {searchResaultFail} from '../constants/Constants';
 import {searchResaultHeader} from '../constants/Constants';
+import {input} from '../constants/Constants';
+import {searchButton} from '../constants/Constants';
 
 export default class SearchInput {
-    constructor(api, form, cardList, container, articles) {
+    constructor(form, cardList, container, articles) {
         this.articles = articles;
-        this.api = api;
         this.form = form;
         this.cardList = cardList;
         this.container = container;
     }
     showPreloader() {
         searchResaultProgress.classList.remove('search-resault__progress_hidden');
+        input.setAttribute('disabled', true);
+        searchButton.setAttribute('disabled' , true);
 
     }
     removePreloader() {
         searchResaultProgress.classList.add('search-resault__progress_hidden');
     }
-    // showMoreResault() {
-    //     if (this.container.childElementCount >= this.cardList.length) {
-    //         searchResaultShowMore.classList.add('search-resault__show-more_hidden');
-    //     } else if (1 + this.container.childElementCount >= this.cardList.length) {
-    //         searchResaultShowMore.classList.add('search-resault__show-more_hidden');
-    //     } else if (2 + this.container.childElementCount >= this.cardList.length) {
-    //         searchResaultShowMore.classList.add('search-resault__show-more_hidden');
-    //     } 
-    //     else {
-    //         searchResaultShowMore.classList.remove('search-resault__show-more_hidden');
-    //     }
-    // }
 
     showMoreResault() {
-this.localStorage = localStorage;
-        if (this.container.childElementCount >= this.localStorage.length) {
-            document.querySelector('.search-resault__show-more').classList.add('search-resault__show-more_hidden');
+        if (this.form.childElementCount >= this.cardList.length) {
+            searchResaultShowMore.classList.add('search-resault__show-more_hidden');
         } else {
-            document.querySelector('.search-resault__show-more').classList.remove('search-resault__show-more_hidden');
+            searchResaultShowMore.classList.remove('search-resault__show-more_hidden');
         }
-        console.log(this.container.childElementCount);
-        console.log(this.localStorage.length)
     }
 
     showFail() {
@@ -75,6 +63,11 @@ this.localStorage = localStorage;
         searchResaultFail.querySelector('.search-resault__fail_header').textContent = 'Во время запроса произошла ошибка.';
         searchResaultFail.classList.remove('search-resault__fail_hidden');
         searchResaultHeader.classList.add('search-resault__header_hidden');
+    }
+
+    activateSearch() {
+        input.removeAttribute('disabled', true);
+        searchButton.removeAttribute('disabled', true);
     }
 
 }

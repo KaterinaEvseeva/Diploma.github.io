@@ -34,3 +34,6 @@ border: 2F71E5;
         margin-top: 16px;
     }
 }
+.main__button:disabled {
+    background-color: lightgrey;
+}

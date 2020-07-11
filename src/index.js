@@ -16,15 +16,15 @@ import {
 import {
     searchResaultFail
 } from './js/constants/Constants';
+import {input} from './js/constants/Constants';
 
 const {
     NEWSAPI_KEY,
     NEWSAPI_URL,
 } = constants;
 
-const input = document.querySelector('.main__input');
+// const input = document.querySelector('.main__input');
 const search = document.querySelector('.main__search');
-const searchData = input.value;
 
 const card = new NewsCard();
 const cardList = new NewsCardList(searchResaultGrid, card, []);
@@ -52,8 +52,6 @@ search.addEventListener('submit', () => {
     }
     newsapi.getNews(searchData)
         .then(articles => {
-            
-            // console.log(articles)
             cardList.showCards(articles, searchData);
             if (articles.length == 0) {
                 return searchInput.showFail();
@@ -65,9 +63,11 @@ search.addEventListener('submit', () => {
         })
         .finally(() => {
             searchInput.removePreloader();
+            searchInput.activateSearch();
         });
 });
 
 document.querySelector('.search-resault__button').addEventListener('click', () => {
     cardList.showCards();
+    searchInput.showMoreResault();
 });

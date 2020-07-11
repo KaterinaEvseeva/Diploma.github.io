@@ -6,6 +6,7 @@ const constants = {
    NEWSAPI_KEY: '422aacd7b9af4b66bca82e0f23418cf8',
    NEWSAPI_URL: 'https://praktikum.tk/news/v2/everything',
    CARDS_PER_STRING: 3,
+   MAX_COMMITS: 20,
    GITHUB_API_URL: 'https://api.github.com/repos/KaterinaEvseeva/Diploma.github.io/commits?sha=level-1',
    // NEWSAPI_KEY: 'ced98f7ead66496eb2bb2486228275c9',
 
@@ -28,5 +29,9 @@ export const searchResaultFail = document.querySelector('.search-resault__fail')
 export const searchResaultHeader = document.querySelector('.search-resault__header');
 
 export const searchResaultDesc = document.querySelector('.search-resault__desc');
+
+export const input = document.querySelector('.main__input');
+
+export const searchButton = document.querySelector('.main__button');
 
 export default constants;

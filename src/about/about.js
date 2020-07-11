@@ -8,6 +8,9 @@ import CommitCard from '../js/components/CommitCard';
 
 import CommitCardList from '../js/components/CommitCardList';
 import GithubApi from '../js/modules/GithubApi';
+import constants from '../js/constants/Constants';
+const {MAX_COMMITS} = constants;
+
 
 const container = document.querySelector('.git.swiper-wrapper');
 
@@ -17,7 +20,7 @@ const githubApi = new GithubApi();
 
 githubApi.getCommits()
     .then(data => {
-        commitCardList.showCommitCards(data);
+        commitCardList.showCommitCards(data.slice(0, MAX_COMMITS));
     })
     .catch((err) => {
         container.textContent = `Коммиты не найдены, код ошибки ${err}`;
