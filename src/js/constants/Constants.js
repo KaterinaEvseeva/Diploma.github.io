@@ -6,7 +6,7 @@ const constants = {
    ONE_WEEK: 24 * 60 * 60 * 1000 * 7,
    ONE_DAY: 1000 * 60 * 60 * 24,
    NEWSAPI_KEY: 'ced98f7ead66496eb2bb2486228275c9',
-   NEWSAPI_URL: 'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=ced98f7ead66496eb2bb2486228275c9',
+   NEWSAPI_URL: 'https://api.cognitive.microsoft.com/bing/v7.0/news/search?q=sailing+dinghies+site:contososailing.com&mkt=en-us HTTP/1.1',
 
 
 };
