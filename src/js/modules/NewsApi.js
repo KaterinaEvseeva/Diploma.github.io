@@ -25,7 +25,7 @@ export default class NewsApi {
             fetch(`${this.proxyUrl}${this.url}?q=${searchData}${this._getDates()}&apiKey=${this.apiKey}&pageSize=100`, {
                     headers: this.headers,
                 mode: 'cors',
-          credentials: 'include'
+              credentials: 'include'
                 })
                 .then((res) => {
                     if (res.ok) {
